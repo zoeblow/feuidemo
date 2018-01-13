@@ -1,0 +1,529 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Count 累加器 — Feui</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
+    <!--[if lte IE 9]>
+      <meta http-equiv="refresh" content="0;url=https://ifuyuan.wang/browser/">
+    <![endif]-->
+    <title>Feui</title>
+    <link rel="stylesheet" href="/docs/./css/style.css">
+    <script>window.PAGE_TYPE = "guide"</script>
+</head>
+<body class="docs">
+    <div id="header">
+  <a id="logo" href="/docs/">
+    <img src="/docs/images/logo.png">
+    <span>Feui</span>
+  </a>
+  <button id='mobile'>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>  
+  <ul id="nav">
+    <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
+<li><a href="https://feui.gitee.io" >示例</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
+  </ul>
+</div>
+    
+      <div id="main" class="fix-sidebar">
+        <div class='main-content'>
+          
+            <button id='mobile2'>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+</button>  
+<div id='mask'></div>
+
+  <div class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
+<li><a href="https://feui.gitee.io" >示例</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
+    </ul>
+    <div class="list">
+      <ul class="menu-root">
+  
+    
+    
+      
+        <li><a class='title-18'>开发指南</a></li>
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/index.html" class="sidebar-link">Feui介绍</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/quickstart.html" class="sidebar-link">快速上手</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/readme.html" class="sidebar-link">开发指北</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/changelog.html" class="sidebar-link">更新日志</a>
+    </li>
+  
+    
+    
+      
+      
+        <li><a class='title-18'>组件系统</a></li>
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/component.html" class="sidebar-link">组件系统文档规则</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/forms.html" class="sidebar-link">文档格式</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/demo.html" class="sidebar-link">栗子 Demo</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+        <li><a class='title-16'>基础组件</a></li>
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/badge.html" class="sidebar-link">Badge 徽章</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/button.html" class="sidebar-link">Button 按钮</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/count.html" class="sidebar-link current">Count 累加器</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/header.html" class="sidebar-link">Header 头部</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/icon.html" class="sidebar-link">Icon 图标</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/qrcode.html" class="sidebar-link">QRcode 二维码</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/range.html" class="sidebar-link">Range 图标</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/rater.html" class="sidebar-link">Rater 评价</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/search.html" class="sidebar-link">Search 搜索框</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/steps.html" class="sidebar-link">Steps 步骤条</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/tab.html" class="sidebar-link">Tab 标签栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/tabber.html" class="sidebar-link">Tabbar 底部标签</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+        <li><a class='title-16'>表单组件</a></li>
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/address.html" class="sidebar-link new">Address 地址栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/cell.html" class="sidebar-link">Cell</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/input.html" class="sidebar-link">输入框 input</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+        <li><a class='title-16'>反馈组件</a></li>
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/actionsheet.html" class="sidebar-link">Actionsheet 地址栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+        <li><a class='title-18'>Team</a></li>
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/team.html" class="sidebar-link">Team</a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div  id='content' class="content guide with-sidebar count-guide">
+  <div class='content_box'>
+    
+      <h1>Count 累加器</h1>
+    
+    <div id='pContent'>
+      <p><a href="https://feui.gitee.io/#/count">Live Demo&gt;&gt;</a></p>
+<blockquote>
+<p><code>fe-count</code> 请在<code>fe-group</code>中使用。</p>
+</blockquote>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Count &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</span><br><span class="line"></span><br><span class="line">components: &#123;</span><br><span class="line">  [Count.name]: Count</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"默认"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-count</span> <span class="attr">name</span>=<span class="string">"数量"</span> <span class="attr">title</span>=<span class="string">"数量"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-count</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"监听 on-change 事件，在调试窗口中输出"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-count</span> <span class="attr">title</span>=<span class="string">"数量"</span> <span class="attr">:value</span>=<span class="string">"0"</span> <span class="attr">:min</span>=<span class="string">"0"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-count</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置宽度为100px"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-count</span> <span class="attr">title</span>=<span class="string">"数量"</span> <span class="attr">width</span>=<span class="string">"100px"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-count</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"圆形按钮"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-count</span> <span class="attr">title</span>=<span class="string">"数量"</span> <span class="attr">v-model</span>=<span class="string">"roundValue"</span> <span class="attr">button-style</span>=<span class="string">"round"</span> <span class="attr">:min</span>=<span class="string">"0"</span> <span class="attr">:max</span>=<span class="string">"5"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-count</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置步长为0.5"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-count</span> <span class="attr">title</span>=<span class="string">"数量"</span> <span class="attr">:step</span>=<span class="string">"0.5"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-count</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置值为1，最小值为-5，最大值为8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-count</span> <span class="attr">title</span>=<span class="string">"数量"</span> <span class="attr">:min</span>=<span class="string">"-5"</span> <span class="attr">:max</span>=<span class="string">"8"</span> <span class="attr">:value</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-count</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置可以输入"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-count</span> <span class="attr">:value</span>=<span class="string">"10"</span> <span class="attr">title</span>=<span class="string">"数量"</span> <span class="attr">fillable</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-count</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>表单值，使用v-model绑定</td>
+<td><code>Number</code></td>
+<td><code>0</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>min</td>
+<td>最小值</td>
+<td><code>Number</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>max</td>
+<td>最大值</td>
+<td><code>Number</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>step</td>
+<td>步长</td>
+<td><code>Number</code></td>
+<td><code>1</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>fillable</td>
+<td>是否可填写</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>width</td>
+<td>输入框宽度</td>
+<td><code>String</code></td>
+<td><code>50px</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>align</td>
+<td>对其方式</td>
+<td><code>String</code></td>
+<td><code>right</code></td>
+<td><code>left</code>, <code>right</code></td>
+</tr>
+<tr>
+<td>button-style</td>
+<td>按钮样式</td>
+<td><code>String</code></td>
+<td><code>square</code></td>
+<td><code>square</code>,<code>round</code></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/docs/feui/guide/component/button.html">Button 按钮</a></span>
+        
+        
+          <span style="float: right;"><a href="/docs/feui/guide/component/header.html">Header 头部</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      文件翻译错误或者想参与贡献?
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/count.md" target="_blank">
+        在Github编辑此页面!
+      </a>
+    </div>
+  </div>
+</div>
+
+          
+        </div>
+      </div>
+      <script src="/docs/./js/smooth-scroll.min.js"></script>
+    
+    <script src="/docs/./js/css.escape.js"></script>
+    <script src="/docs/./js/common.js"></script>
+    <script src="/docs/./js/index.js"></script>
+</body>
+</html>

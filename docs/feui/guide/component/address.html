@@ -1,0 +1,578 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Address 地址栏 — Feui</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
+    <!--[if lte IE 9]>
+      <meta http-equiv="refresh" content="0;url=https://ifuyuan.wang/browser/">
+    <![endif]-->
+    <title>Feui</title>
+    <link rel="stylesheet" href="/docs/./css/style.css">
+    <script>window.PAGE_TYPE = "guide"</script>
+</head>
+<body class="docs">
+    <div id="header">
+  <a id="logo" href="/docs/">
+    <img src="/docs/images/logo.png">
+    <span>Feui</span>
+  </a>
+  <button id='mobile'>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>  
+  <ul id="nav">
+    <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
+<li><a href="https://feui.gitee.io" >示例</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
+  </ul>
+</div>
+    
+      <div id="main" class="fix-sidebar">
+        <div class='main-content'>
+          
+            <button id='mobile2'>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+</button>  
+<div id='mask'></div>
+
+  <div class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
+<li><a href="https://feui.gitee.io" >示例</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
+    </ul>
+    <div class="list">
+      <ul class="menu-root">
+  
+    
+    
+      
+        <li><a class='title-18'>开发指南</a></li>
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/index.html" class="sidebar-link">Feui介绍</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/quickstart.html" class="sidebar-link">快速上手</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/readme.html" class="sidebar-link">开发指北</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/changelog.html" class="sidebar-link">更新日志</a>
+    </li>
+  
+    
+    
+      
+      
+        <li><a class='title-18'>组件系统</a></li>
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/component.html" class="sidebar-link">组件系统文档规则</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/forms.html" class="sidebar-link">文档格式</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/demo.html" class="sidebar-link">栗子 Demo</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+        <li><a class='title-16'>基础组件</a></li>
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/badge.html" class="sidebar-link">Badge 徽章</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/button.html" class="sidebar-link">Button 按钮</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/count.html" class="sidebar-link">Count 累加器</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/header.html" class="sidebar-link">Header 头部</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/icon.html" class="sidebar-link">Icon 图标</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/qrcode.html" class="sidebar-link">QRcode 二维码</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/range.html" class="sidebar-link">Range 图标</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/rater.html" class="sidebar-link">Rater 评价</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/search.html" class="sidebar-link">Search 搜索框</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/steps.html" class="sidebar-link">Steps 步骤条</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/tab.html" class="sidebar-link">Tab 标签栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/tabber.html" class="sidebar-link">Tabbar 底部标签</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+        <li><a class='title-16'>表单组件</a></li>
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/address.html" class="sidebar-link current new">Address 地址栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/cell.html" class="sidebar-link">Cell</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/input.html" class="sidebar-link">输入框 input</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+        <li><a class='title-16'>反馈组件</a></li>
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/actionsheet.html" class="sidebar-link">Actionsheet 地址栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+        <li><a class='title-18'>Team</a></li>
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/team.html" class="sidebar-link">Team</a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div  id='content' class="content guide with-sidebar address-guide">
+  <div class='content_box'>
+    
+      <h1>Address 地址栏</h1>
+    
+    <div id='pContent'>
+      <p><a href="https://feui.gitee.io/#/address">Live Demo&gt;&gt;</a></p>
+<blockquote>
+<p><code>fe-address</code> 请在<code>fe-group</code>中使用。</p>
+</blockquote>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Address &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</span><br><span class="line"><span class="keyword">import</span> ChinaAddressV3   <span class="keyword">from</span> <span class="string">'feui/packages/utils/mock/china_address_v3.json'</span></span><br><span class="line"></span><br><span class="line">components: &#123;</span><br><span class="line">  [Address.name]: Address</span><br><span class="line">&#125;,</span><br><span class="line">data () &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    value: [],</span><br><span class="line">    addressData: ChinaAddressV3</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="默认空值"><a href="#默认空值" class="headerlink" title="默认空值"></a>默认空值</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-address</span> <span class="attr">:title</span>=<span class="string">"title"</span> @<span class="attr">on-hide</span>=<span class="string">"logHide"</span> <span class="attr">v-model</span>=<span class="string">"value_0_1"</span> <span class="attr">:list</span>=<span class="string">"addressData"</span> <span class="attr">placeholder</span>=<span class="string">"请选择地址"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot</span>=<span class="string">"title"</span> <span class="attr">slot-scope</span>=<span class="string">"props"</span>&gt;</span><span class="comment">&lt;!-- use scope="props" when vue &lt; 2.5.0 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">:class</span>=<span class="string">"props.labelClass"</span> <span class="attr">:style</span>=<span class="string">"props.labelStyle"</span> <span class="attr">style</span>=<span class="string">"height:24px;"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"demo-icon demo-icon-big"</span> <span class="attr">style</span>=<span class="string">"font-size:20px;vertical-align:middle;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"vertical-align:middle;"</span>&gt;</span>地址<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-address</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-address</span> @<span class="attr">on-hide</span>=<span class="string">"logHide"</span> @<span class="attr">on-show</span>=<span class="string">"logShow"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:title</span>=<span class="string">"title"</span> <span class="attr">v-model</span>=<span class="string">"value"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:list</span>=<span class="string">"addressData"</span> @<span class="attr">on-shadow-change</span>=<span class="string">"onShadowChange"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">placeholder</span>=<span class="string">"请选择地址"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">inline-desc</span>=<span class="string">"可以设置placeholder"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:show.sync</span>=<span class="string">"showAddress"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-address</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"上面value值"</span> <span class="attr">:value</span>=<span class="string">"value"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="定时关闭"><a href="#定时关闭" class="headerlink" title="定时关闭"></a>定时关闭</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"padding: 15px;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-address</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> <span class="attr">popup-title</span>=<span class="string">"选择地址"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:title</span>=<span class="string">"title"</span> <span class="attr">v-model</span>=<span class="string">"value"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:list</span>=<span class="string">"addressData"</span> <span class="attr">placeholder</span>=<span class="string">"请选择地址"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:show.sync</span>=<span class="string">"showAddress"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-address</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click.native</span>=<span class="string">"doShowAddress"</span>&gt;</span>单独控制显示(2s后关闭)<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="通过事件改变数据"><a href="#通过事件改变数据" class="headerlink" title="通过事件改变数据"></a>通过事件改变数据</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">label-width</span>=<span class="string">"5em"</span> <span class="attr">label-align</span>=<span class="string">"left"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-address</span> <span class="attr">:title</span>=<span class="string">"title2"</span> <span class="attr">v-model</span>=<span class="string">"value2"</span> <span class="attr">raw-value</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:list</span>=<span class="string">"addressData"</span> <span class="attr">value-text-align</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-address</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"padding: 0 15px;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click.native</span>=<span class="string">"changeData"</span>&gt;</span>改变数据（通过 id）<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click.native</span>=<span class="string">"changeDataByLabels"</span>&gt;</span>改变数据（通过文字值）<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click.native</span>=<span class="string">"changeDataByLabels2"</span>&gt;</span>改变数据（两级，通过文字值）<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">  changeData () &#123;</span><br><span class="line">    <span class="keyword">this</span>.value2 = [<span class="string">'430000'</span>, <span class="string">'430400'</span>, <span class="string">'430407'</span>]</span><br><span class="line">  &#125;,</span><br><span class="line">  changeDataByLabels () &#123;</span><br><span class="line">    <span class="keyword">this</span>.value2 = [<span class="string">'广东省'</span>, <span class="string">'广州市'</span>, <span class="string">'天河区'</span>]</span><br><span class="line">  &#125;,</span><br><span class="line">  changeDataByLabels2 () &#123;</span><br><span class="line">    <span class="keyword">this</span>.value2 = [<span class="string">'广东省'</span>, <span class="string">'中山市'</span>, <span class="string">'--'</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="只显示省市两级"><a href="#只显示省市两级" class="headerlink" title="只显示省市两级"></a>只显示省市两级</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-address</span> <span class="attr">title</span>=<span class="string">"二级省市"</span> <span class="attr">v-model</span>=<span class="string">"value3"</span> <span class="attr">raw-value</span> <span class="attr">:list</span>=<span class="string">"addressData"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-address</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-address</span> <span class="attr">title</span>=<span class="string">"只显示省市"</span> <span class="attr">v-model</span>=<span class="string">"value4"</span> <span class="attr">raw-value</span> <span class="attr">:list</span>=<span class="string">"addressData"</span> <span class="attr">hide-district</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-address</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"value值"</span> <span class="attr">:value</span>=<span class="string">"value4"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"转换成文字值"</span> <span class="attr">:value</span>=<span class="string">"getName(value4)"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="错误地址"><a href="#错误地址" class="headerlink" title="错误地址"></a>错误地址</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"错误的地址将不能正确渲染到相应位置"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fe-address</span> <span class="attr">title</span>=<span class="string">"错误的值"</span> <span class="attr">v-model</span>=<span class="string">"value5"</span> <span class="attr">raw-value</span> <span class="attr">:list</span>=<span class="string">"addressData"</span> <span class="attr">inline-desc</span>=<span class="string">"广东省, 深圳 市, 南山区"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-address</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>value</td>
+<td>表单值, 使用v-model绑定</td>
+<td><code>Array</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>list</td>
+<td>地址列表</td>
+<td><code>Array</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>inline-desc</td>
+<td>标题下的描述</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>没有值的提示文字</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>hide-district</td>
+<td>隐藏区县，只显示省市</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>value-text-align</td>
+<td>value值对其方式(text-align)</td>
+<td><code>String</code></td>
+<td><code>right</code></td>
+<td><code>left</code>,<code>right</code>,<code>center</code></td>
+</tr>
+<tr>
+<td>popup-style</td>
+<td>Popup弹窗样式，，可以用于强制指定 z-index</td>
+<td><code>Object</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>show</td>
+<td>显示 (支持.sync修饰 next)</td>
+<td><code>Boolean</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th>Slot名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>title 插槽，可以使用它来添加<code>icon</code>等自定义样式，受控于<code>fe-group</code>需要从<code>scope</code>里继承<code>class</code>和样式</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
+<thead>
+<tr>
+<th>事件名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>on-hide</td>
+<td>-</td>
+<td>关闭后触发，当非确定时，参数为false，反之为true</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-show</td>
+<td>-</td>
+<td>显示时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-shadow-change</td>
+<td>Array ids, Array names</td>
+<td>picker 值变化时触发，即滑动 picker 时触发</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    
+      <div class="guide-links">
+        
+        
+          <span style="float: right;"><a href="/docs/feui/guide/component/cell.html">Cell</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      文件翻译错误或者想参与贡献?
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/address.md" target="_blank">
+        在Github编辑此页面!
+      </a>
+    </div>
+  </div>
+</div>
+
+          
+        </div>
+      </div>
+      <script src="/docs/./js/smooth-scroll.min.js"></script>
+    
+    <script src="/docs/./js/css.escape.js"></script>
+    <script src="/docs/./js/common.js"></script>
+    <script src="/docs/./js/index.js"></script>
+</body>
+</html>

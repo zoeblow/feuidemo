@@ -1,0 +1,617 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Search 搜索框 — Feui</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
+    <!--[if lte IE 9]>
+      <meta http-equiv="refresh" content="0;url=https://ifuyuan.wang/browser/">
+    <![endif]-->
+    <title>Feui</title>
+    <link rel="stylesheet" href="/docs/./css/style.css">
+    <script>window.PAGE_TYPE = "guide"</script>
+</head>
+<body class="docs">
+    <div id="header">
+  <a id="logo" href="/docs/">
+    <img src="/docs/images/logo.png">
+    <span>Feui</span>
+  </a>
+  <button id='mobile'>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>  
+  <ul id="nav">
+    <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
+<li><a href="https://feui.gitee.io" >示例</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
+  </ul>
+</div>
+    
+      <div id="main" class="fix-sidebar">
+        <div class='main-content'>
+          
+            <button id='mobile2'>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+</button>  
+<div id='mask'></div>
+
+  <div class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
+<li><a href="https://feui.gitee.io" >示例</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
+    </ul>
+    <div class="list">
+      <ul class="menu-root">
+  
+    
+    
+      
+        <li><a class='title-18'>开发指南</a></li>
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/index.html" class="sidebar-link">Feui介绍</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/quickstart.html" class="sidebar-link">快速上手</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/readme.html" class="sidebar-link">开发指北</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/changelog.html" class="sidebar-link">更新日志</a>
+    </li>
+  
+    
+    
+      
+      
+        <li><a class='title-18'>组件系统</a></li>
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/component.html" class="sidebar-link">组件系统文档规则</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/forms.html" class="sidebar-link">文档格式</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/demo.html" class="sidebar-link">栗子 Demo</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+        <li><a class='title-16'>基础组件</a></li>
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/badge.html" class="sidebar-link">Badge 徽章</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/button.html" class="sidebar-link">Button 按钮</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/count.html" class="sidebar-link">Count 累加器</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/header.html" class="sidebar-link">Header 头部</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/icon.html" class="sidebar-link">Icon 图标</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/qrcode.html" class="sidebar-link">QRcode 二维码</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/range.html" class="sidebar-link">Range 图标</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/rater.html" class="sidebar-link">Rater 评价</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/search.html" class="sidebar-link current">Search 搜索框</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/steps.html" class="sidebar-link">Steps 步骤条</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/tab.html" class="sidebar-link">Tab 标签栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/tabber.html" class="sidebar-link">Tabbar 底部标签</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+        <li><a class='title-16'>表单组件</a></li>
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/address.html" class="sidebar-link new">Address 地址栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/cell.html" class="sidebar-link">Cell</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/input.html" class="sidebar-link">输入框 input</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+        <li><a class='title-16'>反馈组件</a></li>
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/actionsheet.html" class="sidebar-link">Actionsheet 地址栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+        <li><a class='title-18'>Team</a></li>
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/team.html" class="sidebar-link">Team</a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div  id='content' class="content guide with-sidebar search-guide">
+  <div class='content_box'>
+    
+      <h1>Search 搜索框</h1>
+    
+    <div id='pContent'>
+      <p><a href="https://feui.gitee.io/#/search">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Search &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</span><br><span class="line"></span><br><span class="line">components: &#123;</span><br><span class="line">  [Search.name]: Search</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="浮动到顶端用法"><a href="#浮动到顶端用法" class="headerlink" title="浮动到顶端用法"></a>浮动到顶端用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-search</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">result-click</span>=<span class="string">"resultClick"</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">"getResult"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:results</span>=<span class="string">"results"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"value"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">position</span>=<span class="string">"absolute"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">auto-scroll-to-top</span> <span class="attr">top</span>=<span class="string">"46px"</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">on-focus</span>=<span class="string">"onFocus"</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">on-cancel</span>=<span class="string">"onCancel"</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">on-submit</span>=<span class="string">"onSubmit"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">ref</span>=<span class="string">"search"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-search</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="固定定位"><a href="#固定定位" class="headerlink" title="固定定位"></a>固定定位</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fe-search</span> </span></span><br><span class="line"><span class="tag">  @<span class="attr">on-submit</span>=<span class="string">"onSubmit"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:auto-fixed</span>=<span class="string">"false"</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"value2"</span> </span></span><br><span class="line"><span class="tag">  @<span class="attr">on-focus</span>=<span class="string">"onFocus"</span> </span></span><br><span class="line"><span class="tag">  @<span class="attr">on-cancel</span>=<span class="string">"onCancel"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-search</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>表单值，使用<code>v-model</code></td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>搜索框提示文字</td>
+<td><code>String</code></td>
+<td>搜索</td>
+<td>-</td>
+</tr>
+<tr>
+<td>cancel-text</td>
+<td>取消文字</td>
+<td><code>String</code></td>
+<td>取消</td>
+<td>-</td>
+</tr>
+<tr>
+<td>autoFixed</td>
+<td>书否固定定位到顶部</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>results</td>
+<td>指定搜索结果,key有名为<code>title</code>的对象组成的数组</td>
+<td><code>Array</code></td>
+<td>-</td>
+<td>如 [{title: ‘搜索结果’, xxx: xxxx}]</td>
+</tr>
+<tr>
+<td>top</td>
+<td>自动固定时距离顶部的距离</td>
+<td><code>String</code></td>
+<td><code>0px</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>position</td>
+<td>自动固定时的定位，一些布局下可能需要使用其他定位</td>
+<td><code>String</code></td>
+<td><code>fixed</code></td>
+<td><code>absolute</code></td>
+</tr>
+<tr>
+<td>auto-scroll-to-top</td>
+<td>Safari下弹出键盘时可能会出现看不到input，需要手动滚动，启用该属性会在fix时滚动到顶端</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th>Slot名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>搜索结果列表上面 slot，可以用来自定义搜索结果显示区域(results 设为空)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>right</td>
+<td>输入框右侧 slot</td>
+<td>-</td>
+</tr>
+<tr>
+<td>left</td>
+<td>输入框左侧 slot</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
+<thead>
+<tr>
+<th>事件名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>on-submit</td>
+<td>-</td>
+<td>表单提交时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-cancel</td>
+<td>-</td>
+<td>点击取消按钮时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-change</td>
+<td><code>value</code></td>
+<td>输入文字变化时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-result-click</td>
+<td><code>item</code></td>
+<td>点击结果条目时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-focus</td>
+<td>-</td>
+<td>输入框获取到焦点时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-blur</td>
+<td>-</td>
+<td>输入框失去焦点时触发</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setFocus</td>
+<td>-</td>
+<td>获取 input 焦点，在 Safari 上你必须在 click 事件回调里使用才能生效</td>
+<td>-</td>
+</tr>
+<tr>
+<td>setBlur</td>
+<td>-</td>
+<td>手动设置 input 失去焦点，一般用于在 on-submit 事件中实现隐藏手机键盘</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/docs/feui/guide/component/rater.html">Rater 评价</a></span>
+        
+        
+          <span style="float: right;"><a href="/docs/feui/guide/component/steps.html">Steps 步骤条</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      文件翻译错误或者想参与贡献?
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/search.md" target="_blank">
+        在Github编辑此页面!
+      </a>
+    </div>
+  </div>
+</div>
+
+          
+        </div>
+      </div>
+      <script src="/docs/./js/smooth-scroll.min.js"></script>
+    
+    <script src="/docs/./js/css.escape.js"></script>
+    <script src="/docs/./js/common.js"></script>
+    <script src="/docs/./js/index.js"></script>
+</body>
+</html>
