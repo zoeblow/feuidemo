@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Team — Feui</title>
+    <title>Checkicon 单选按钮 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -25,9 +25,9 @@
     <span class="btn-bar"></span>
   </button>  
   <ul id="nav">
-    <li><a href="/docs/feui/guide/" class="nav-link">教程</a></li>
+    <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
 <li><a href="https://feui.gitee.io" >示例</a></li>
-<li><a href="/docs/feui/guide/team.html" class="nav-link team current">Team</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
   </ul>
 </div>
     
@@ -44,9 +44,9 @@
   <div class="sidebar" id="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
-      <li><a href="/docs/feui/guide/" class="nav-link">教程</a></li>
+      <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
 <li><a href="https://feui.gitee.io" >示例</a></li>
-<li><a href="/docs/feui/guide/team.html" class="nav-link team current">Team</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
     </ul>
     <div class="list">
       <ul class="menu-root">
@@ -364,7 +364,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/checkicon.html" class="sidebar-link new">Checkicon 单选按钮</a>
+      <a href="/docs/feui/guide/component/checkicon.html" class="sidebar-link current new">Checkicon 单选按钮</a>
     </li>
   
     
@@ -410,7 +410,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/team.html" class="sidebar-link current">Team</a>
+      <a href="/docs/feui/guide/team.html" class="sidebar-link">Team</a>
     </li>
   
 </ul>
@@ -421,23 +421,66 @@
 
 
 
-<div  id='content' class="content guide with-sidebar team-guide">
+<div  id='content' class="content guide with-sidebar checkicon-guide">
   <div class='content_box'>
     
-      <h1>Team</h1>
+      <h1>Checkicon 单选按钮</h1>
     
     <div id='pContent'>
-      <h3 id="我们的团队"><a href="#我们的团队" class="headerlink" title="我们的团队"></a>我们的团队</h3>
+      <p><a href="https://feui.gitee.io/#/checkicon">Live Demo&gt;&gt;</a></p>
+<blockquote>
+<p><code>fe-count</code> 请在<code>fe-group</code>中使用。</p>
+</blockquote>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Checkicon, &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Checkicon.name]: Checkicon</div><div class="line">&#125;</div><div class="line">data () &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    demo1: <span class="literal">false</span>,</div><div class="line">    demo2: <span class="literal">true</span>,</div><div class="line">    demo3: <span class="literal">false</span>,</div><div class="line">    demo4: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="左对齐"><a href="#左对齐" class="headerlink" title="左对齐"></a>左对齐</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"左对齐"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-checkicon</span> <span class="attr">:value.sync</span>=<span class="string">"demo1"</span>&gt;</span></div><div class="line">    你是否同意? (&#123;&#123; demo1 &#125;&#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">fe-checkicon</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-checkicon</span> <span class="attr">:value.sync</span>=<span class="string">"demo2"</span> <span class="attr">type</span>=<span class="string">"plain"</span>&gt;</span></div><div class="line">    同意《注册协议》(&#123;&#123; demo2 &#125;&#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">fe-checkicon</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="右对齐"><a href="#右对齐" class="headerlink" title="右对齐"></a>右对齐</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"右对齐"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-checkicon</span> <span class="attr">:value.sync</span>=<span class="string">"demo4"</span> <span class="attr">right</span> &gt;</span></div><div class="line">    你是否同意? (&#123;&#123; demo4 &#125;&#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">fe-checkicon</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-checkicon</span> <span class="attr">:value.sync</span>=<span class="string">"demo3"</span> <span class="attr">right</span> <span class="attr">type</span>=<span class="string">"plain"</span>&gt;</span></div><div class="line">    同意《注册协议》(&#123;&#123;demo3&#125;&#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">fe-checkicon</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>是否被选中，使用 :value.sync 双向绑定</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td>check icon 选中样式</td>
+<td><code>String</code></td>
+<td>-</td>
+<td><code>plain</code></td>
+</tr>
+<tr>
+<td>right</td>
+<td>icon是否在右边</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+</tbody>
+</table>
+
     </div>
     
       <div class="guide-links">
+        
+          <span>← <a href="/docs/feui/guide/component/cell.html">Cell 单元格</a></span>
         
         
       </div>
     
     <div class="footer">
       文件翻译错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/team.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/checkicon.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
