@@ -364,7 +364,21 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/checkicon.html" class="sidebar-link current new">Checkicon 单选按钮</a>
+      <a href="/docs/feui/guide/component/checkicon.html" class="sidebar-link current">Checkicon 单选按钮</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/checklist.html" class="sidebar-link new">Checklist 按钮组</a>
     </li>
   
     
@@ -431,7 +445,7 @@
 <blockquote>
 <p><code>fe-count</code> 请在<code>fe-group</code>中使用。</p>
 </blockquote>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Checkicon, &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Checkicon.name]: Checkicon</div><div class="line">&#125;</div><div class="line">data () &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    demo1: <span class="literal">false</span>,</div><div class="line">    demo2: <span class="literal">true</span>,</div><div class="line">    demo3: <span class="literal">false</span>,</div><div class="line">    demo4: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Checkicon &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Checkicon.name]: Checkicon</div><div class="line">&#125;</div><div class="line">data () &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    demo1: <span class="literal">false</span>,</div><div class="line">    demo2: <span class="literal">true</span>,</div><div class="line">    demo3: <span class="literal">false</span>,</div><div class="line">    demo4: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="左对齐"><a href="#左对齐" class="headerlink" title="左对齐"></a>左对齐</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"左对齐"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-checkicon</span> <span class="attr">:value.sync</span>=<span class="string">"demo1"</span>&gt;</span></div><div class="line">    你是否同意? (&#123;&#123; demo1 &#125;&#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">fe-checkicon</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-checkicon</span> <span class="attr">:value.sync</span>=<span class="string">"demo2"</span> <span class="attr">type</span>=<span class="string">"plain"</span>&gt;</span></div><div class="line">    同意《注册协议》(&#123;&#123; demo2 &#125;&#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">fe-checkicon</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="右对齐"><a href="#右对齐" class="headerlink" title="右对齐"></a>右对齐</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"右对齐"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-checkicon</span> <span class="attr">:value.sync</span>=<span class="string">"demo4"</span> <span class="attr">right</span> &gt;</span></div><div class="line">    你是否同意? (&#123;&#123; demo4 &#125;&#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">fe-checkicon</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-checkicon</span> <span class="attr">:value.sync</span>=<span class="string">"demo3"</span> <span class="attr">right</span> <span class="attr">type</span>=<span class="string">"plain"</span>&gt;</span></div><div class="line">    同意《注册协议》(&#123;&#123;demo3&#125;&#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">fe-checkicon</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
@@ -475,6 +489,8 @@
         
           <span>← <a href="/docs/feui/guide/component/cell.html">Cell 单元格</a></span>
         
+        
+          <span style="float: right;"><a href="/docs/feui/guide/component/checklist.html">Checklist 按钮组</a> →</span>
         
       </div>
     
