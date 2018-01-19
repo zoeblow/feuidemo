@@ -470,6 +470,9 @@
     
     <div id='pContent'>
       <p><a href="https://feui.gitee.io/#/flexbox">Live Demo&gt;&gt;</a></p>
+<blockquote>
+<p>由于本组件大量用到<code>flex</code>知识,对此知识不明白的，推荐查看<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">阮老师的教程</a></p>
+</blockquote>
 <h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Flexbox,FlexboxItem &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Flexbox.name]: Flexbox,</div><div class="line">  [FlexboxItem.name]: FlexboxItem</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-demo</span>&#123;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#4a90e2</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">4px</span>;</div><div class="line">  <span class="attribute">background-clip</span>: padding-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="横向排列"><a href="#横向排列" class="headerlink" title="横向排列"></a>横向排列</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">flexbox</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">flexbox-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flex-demo"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">flexbox-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">flexbox-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flex-demo"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">flexbox-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">flexbox-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flex-demo"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">flexbox-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">flexbox-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flex-demo"</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">flexbox-item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">flexbox</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -492,10 +495,104 @@
 </thead>
 <tbody>
 <tr>
+<td>gutter</td>
+<td>间隙像素大小（px）</td>
+<td><code>Number</code></td>
+<td><code>8</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>orient</td>
+<td>排列方向</td>
+<td><code>String</code></td>
+<td><code>horizontal</code></td>
+<td><code>horizontal</code>,<code>vertical</code></td>
+</tr>
+<tr>
+<td>justify</td>
+<td>flex的justify-content属性</td>
+<td><code>String</code></td>
 <td>-</td>
 <td>-</td>
-<td><code>-</code></td>
+</tr>
+<tr>
+<td>align</td>
+<td>flex的align-items属性</td>
+<td><code>String</code></td>
 <td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>wrap</td>
+<td>flex的flex-wrap属性</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>flex的flex-direction属性</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th>Slot名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>flexbox-item的内容插槽</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="FlexboxItem"><a href="#FlexboxItem" class="headerlink" title="FlexboxItem"></a>FlexboxItem</h2><h3 id="API-1"><a href="#API-1" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>span</td>
+<td>占用宽度，如果不设置，所有flexbox-item将平分</td>
+<td><code>Number</code></td>
+<td><code>8</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>order</td>
+<td>flex的order属性</td>
+<td><code>String</code></td>
+<td><code>8</code></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Slots-1"><a href="#Slots-1" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th>Slot名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>内容插槽</td>
 <td>-</td>
 </tr>
 </tbody>
