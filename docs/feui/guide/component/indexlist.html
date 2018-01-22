@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>QRcode 二维码 — Feui</title>
+    <title>Indexlist 分类列表 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -236,7 +236,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/qrcode.html" class="sidebar-link current">QRcode 二维码</a>
+      <a href="/docs/feui/guide/component/qrcode.html" class="sidebar-link">QRcode 二维码</a>
     </li>
   
     
@@ -420,7 +420,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/indexlist.html" class="sidebar-link">Indexlist 分类列表</a>
+      <a href="/docs/feui/guide/component/indexlist.html" class="sidebar-link current">Indexlist 分类列表</a>
     </li>
   
     
@@ -491,19 +491,19 @@
 
 
 
-<div  id='content' class="content guide with-sidebar qrcode-guide">
+<div  id='content' class="content guide with-sidebar indexlist-guide">
   <div class='content_box'>
     
-      <h1>QRcode 二维码</h1>
+      <h1>Indexlist 分类列表</h1>
     
     <div id='pContent'>
-      <h1 id="组件还没写"><a href="#组件还没写" class="headerlink" title="组件还没写"></a>组件还没写</h1><p><a href="https://feui.gitee.io/#/qrcode">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Qrcode &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Qrcode.name]: Qrcode</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="二维码尺寸-200px"><a href="#二维码尺寸-200px" class="headerlink" title="二维码尺寸 200px"></a>二维码尺寸 200px</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span> <span class="attr">size</span>=<span class="string">"200"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="canvas类型"><a href="#canvas类型" class="headerlink" title="canvas类型"></a>canvas类型</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span> <span class="attr">type</span>=<span class="string">"canvas"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="二维码颜色-红色"><a href="#二维码颜色-红色" class="headerlink" title="二维码颜色 红色"></a>二维码颜色 红色</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span> <span class="attr">fg-color</span>=<span class="string">"#ff0000"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="二维码背景颜色-灰色"><a href="#二维码背景颜色-灰色" class="headerlink" title="二维码背景颜色 灰色"></a>二维码背景颜色 灰色</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span> <span class="attr">fg-color</span>=<span class="string">"#cccccc"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
+      <p><a href="https://feui.gitee.io/#/indexlist">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Indexlist &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Indexlist.name]: Indexlist</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><blockquote>
+<p><code>link</code> 如果有该属性，右侧将会出现指引点击的右箭头，当做路由跳转。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-list</span> <span class="attr">v-model</span>=<span class="string">"oData"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-list</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data() &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      oData: [&#123;</div><div class="line">        name: <span class="string">'#'</span>,</div><div class="line">        list: [&#123;</div><div class="line">            text: <span class="string">'12547896'</span></div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'451384'</span></div><div class="line">        &#125;]</div><div class="line">      &#125;,&#123;</div><div class="line">        name: <span class="string">'F'</span>,</div><div class="line">        list: [&#123;</div><div class="line">            text: <span class="string">'海贼王'</span>,</div><div class="line">            link:<span class="string">'/cell'</span></div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'汇通'</span>,</div><div class="line">        &#125;,&#123;</div><div class="line">            text:<span class="string">'hotmail'</span></div><div class="line">        &#125;]</div><div class="line">      &#125;,&#123;</div><div class="line">        name: <span class="string">'A'</span>,</div><div class="line">        list: [&#123;</div><div class="line">            text: <span class="string">'爱奇艺'</span>,</div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'阿里云'</span>,</div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'阿里巴巴'</span>,</div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'安居客'</span>,</div><div class="line">        &#125;,]</div><div class="line">      &#125;]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -517,38 +517,17 @@
 <tbody>
 <tr>
 <td>value</td>
-<td>编码内容，如果为链接，请保证有http(s)协议名</td>
-<td><code>String</code></td>
+<td>列表显示值，使用v-model绑定</td>
+<td><code>Object</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>size</td>
-<td>二维码尺寸</td>
-<td><code>Number</code></td>
-<td><code>160</code></td>
-<td>像素(px)</td>
-</tr>
-<tr>
-<td>bg-color</td>
-<td>二维码背景颜色</td>
-<td><code>String</code></td>
-<td><code>#FFFFFF</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>fg-color</td>
-<td>二维码颜色</td>
-<td><code>String</code></td>
-<td><code>#000000</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>type</td>
-<td>渲染类型</td>
-<td><code>String</code></td>
-<td><code>img</code></td>
-<td><code>canvas</code>,<code>img</code></td>
+<td>isSort</td>
+<td>是否需要根据name排序</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false,true</code></td>
 </tr>
 </tbody>
 </table>
@@ -557,16 +536,14 @@
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/icon.html">Icon 图标</a></span>
+          <span>← <a href="/docs/feui/guide/component/flexbox.html">Flexbox 弹性布局</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/range.html">Range 滑块</a> →</span>
         
       </div>
     
     <div class="footer">
       文件翻译错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/qrcode.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/indexlist.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
