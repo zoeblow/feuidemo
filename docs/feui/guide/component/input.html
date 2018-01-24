@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>输入框 input — Feui</title>
+    <title>input 输入框 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -434,7 +434,21 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/inlinecalendar.html" class="sidebar-link new">inlineCalendar 日历组件</a>
+      <a href="/docs/feui/guide/component/inlinecalendar.html" class="sidebar-link">inlineCalendar 日历组件</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/input.html" class="sidebar-link current new">input 输入框</a>
     </li>
   
     
@@ -449,20 +463,6 @@
     
     <li>
       <a href="/docs/feui/guide/component/pullrefresh.html" class="sidebar-link">Pullrefresh 刷新加载</a>
-    </li>
-  
-    
-    
-      
-      
-      
-      
-      
-      
-    
-    
-    <li>
-      <a href="/docs/feui/guide/component/input.html" class="sidebar-link current">输入框 input</a>
     </li>
   
     
@@ -508,14 +508,274 @@
 <div  id='content' class="content guide with-sidebar input-guide">
   <div class='content_box'>
     
-      <h1>输入框 input</h1>
+      <h1>input 输入框</h1>
     
     <div id='pContent'>
-      <h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><p>我是一个输入框 </p>
+      <p><a href="https://feui.gitee.io/#/input">Live Demo&gt;&gt;</a></p>
+<blockquote>
+<p><code>fe-cell</code> 请在<code>fe-group</code>中使用。<br>如果你想实现在输入框右边按钮切换密码明文，请使用<code>slot=right</code>实现<code>type</code>切换。 </p>
+</blockquote>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Flexbox &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Input.name]: Input</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">'value'</span> <span class="attr">v-model</span>=<span class="string">"value"</span> <span class="attr">placeholder</span>=<span class="string">"我是占位符"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="不可用状态"><a href="#不可用状态" class="headerlink" title="不可用状态"></a>不可用状态</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"不可用状态"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">'value'</span> <span class="attr">disabled</span> <span class="attr">v-model</span>=<span class="string">"disabledValue"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="设置最大值最小值"><a href="#设置最大值最小值" class="headerlink" title="设置最大值最小值"></a>设置最大值最小值</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"set min=2 and max=5"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"2-5个字符"</span> <span class="attr">placeholder</span>=<span class="string">""</span> <span class="attr">:min</span>=<span class="string">"2"</span> <span class="attr">:max</span>=<span class="string">"5"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="设置is-type属性"><a href="#设置is-type属性" class="headerlink" title="设置is-type属性"></a>设置<code>is-type</code>属性</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"请输入姓名"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"姓名"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"请输入姓名"</span> <span class="attr">is-type</span>=<span class="string">"china-name"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置 keyboard=number,is-type=china-mobile"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"手机号码"</span> <span class="attr">name</span>=<span class="string">"mobile"</span> <span class="attr">placeholder</span>=<span class="string">"请输入手机号码"</span> <span class="attr">keyboard</span>=<span class="string">"number"</span> <span class="attr">is-type</span>=<span class="string">"china-mobile"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"set is-type=email"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"邮箱"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">placeholder</span>=<span class="string">"请输入邮箱地址"</span> <span class="attr">is-type</span>=<span class="string">"email"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"is-type传入function"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"输入验证"</span> <span class="attr">:is-type</span>=<span class="string">"be2333"</span> <span class="attr">placeholder</span>=<span class="string">"必须输入2333"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="不显示清除按钮"><a href="#不显示清除按钮" class="headerlink" title="不显示清除按钮"></a>不显示清除按钮</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"不显示清除按钮"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"message"</span> <span class="attr">required</span> <span class="attr">placeholder</span>=<span class="string">"我是可爱的占位符"</span> <span class="attr">:show-clear</span>=<span class="string">"false"</span> <span class="attr">autocapitalize</span>=<span class="string">"characters"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="使用icon代替title"><a href="#使用icon代替title" class="headerlink" title="使用icon代替title"></a>使用icon代替title</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"使用icon代替title"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"必须输入2333"</span> <span class="attr">:is-type</span>=<span class="string">"be2333"</span> <span class="attr">placeholder</span>=<span class="string">"必须输入2333"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">slot</span>=<span class="string">"label"</span> <span class="attr">style</span>=<span class="string">"padding-right:10px;display:block;"</span> <span class="attr">src</span>=<span class="string">"http://temp.im/42x42/34AADC/fff"</span> <span class="attr">width</span>=<span class="string">"24"</span> <span class="attr">height</span>=<span class="string">"24"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="输入格式化"><a href="#输入格式化" class="headerlink" title="输入格式化"></a>输入格式化</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"mask"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"手机号码格式化"</span> <span class="attr">mask</span>=<span class="string">"999 9999 9999"</span> <span class="attr">v-model</span>=<span class="string">"maskValue"</span> <span class="attr">:max</span>=<span class="string">"13"</span> <span class="attr">is-type</span>=<span class="string">"china-mobile"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"value"</span> <span class="attr">:value</span>=<span class="string">"maskValue"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">title</span>=<span class="string">"(99) 9-999"</span> <span class="attr">mask</span>=<span class="string">"(99) 9-999"</span>  <span class="attr">v-model</span>=<span class="string">"maskValue2"</span> <span class="attr">:max</span>=<span class="string">"10"</span> <span class="attr">placeholder</span>=<span class="string">"76幢1单元305"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>label文字</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>站位提示</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>value</td>
+<td>表单值，使用<code>v-model</code>绑定</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用填写</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td>input的<code>type</code>属性，目前支持 <code>text</code>,<code>number</code>,<code>email</code>,<code>password</code>,<code>tel</code></td>
+<td><code>String</code></td>
+<td><code>text</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>is-type</td>
+<td>内置验证器，支持<code>email</code>,<code>china-name</code>,<code>china-mobile</code>,<br> 同样也支持直接传函数, 需要同步返回一个对象<code>{valid:true}</code><br>或者<code>{valid:false, msg:错误信息}</code></td>
+<td><code>String</code>,<code>Function</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>required</td>
+<td>是否必值，如果不禁用验证，当没有填写时会在右侧显示错误icon</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>show-clear</td>
+<td>是否显示清除icon</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>min</td>
+<td>最小输入字符限制</td>
+<td><code>Number</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>max</td>
+<td>最大输入字符限制，等同于<code>maxlength</code></td>
+<td><code>Number</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>debounce</td>
+<td><code>debounce</code>用以限制<code>on-change</code>事件触发。如果你需要根据用户输<br>入做<code>ajax</code>请求，建议开启以节省无效请求和服务器资源，单位为毫秒</td>
+<td><code>Number</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>placeholder-align</td>
+<td><code>placeholder</code>对其方式</td>
+<td><code>String</code></td>
+<td><code>left</code></td>
+<td><code>left</code>,<code>right</code>,<code>center</code></td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>值对齐方式</td>
+<td><code>String</code></td>
+<td><code>left</code></td>
+<td><code>left</code>,<code>right</code>,<code>center</code></td>
+</tr>
+<tr>
+<td>label-width</td>
+<td>label 宽度，权重比 group 的 labelWidth 高</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>mask</td>
+<td>值格式化，依赖于 vanilla-masker，其中 9 表示数字，A 表示大写字母，S 表示数字或者字母</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>should-toast-error</td>
+<td>是否在点击错误图标时用 toast 的形式显示错误</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th>Slot名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label</td>
+<td>用于自定义<code>label</code>(即 title)部分内容，比如使用<code>icon</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>restricted-label</td>
+<td>用于自定义<code>label</code>部分，和<code>slot=label</code>不同的是，该slot宽度受到父组件<code>group</code>的限制</td>
+<td>-</td>
+</tr>
+<tr>
+<td>right</td>
+<td>用以在输入框右边显示内容，比如验证码图片，单位，切换密码显示方式等</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
+<thead>
+<tr>
+<th>事件名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>on-focus</td>
+<td><code>value, $event</code></td>
+<td>input的<code>focus</code>事件</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-blur</td>
+<td><code>value, $event</code></td>
+<td>input的<code>blur</code>事件</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-enter</td>
+<td><code>value, $event</code></td>
+<td>input输入完成后点击<code>enter(确认)</code>事件</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-change</td>
+<td><code>value</code></td>
+<td>输入值变化时触发。如果你使用了<code>debounce</code>，那么触发将不会是实时的。</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-click-error-icon</td>
+<td><code>error</code></td>
+<td>点击错误图标时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>focus</td>
+<td>-</td>
+<td>手动设置<code>input</code>获得焦点</td>
+<td>-</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>-</td>
+<td>手动设置<code>input</code>失去焦点</td>
+<td>-</td>
+</tr>
+<tr>
+<td>reset</td>
+<td><code>value = &#39;&#39;</code></td>
+<td>重置输入框值，清除错误信息</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
     </div>
     
       <div class="guide-links">
+        
+          <span>← <a href="/docs/feui/guide/component/inlinecalendar.html">inlineCalendar 日历组件</a></span>
         
         
       </div>

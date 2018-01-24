@@ -434,7 +434,21 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/inlinecalendar.html" class="sidebar-link current new">inlineCalendar 日历组件</a>
+      <a href="/docs/feui/guide/component/inlinecalendar.html" class="sidebar-link current">inlineCalendar 日历组件</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/input.html" class="sidebar-link new">input 输入框</a>
     </li>
   
     
@@ -449,20 +463,6 @@
     
     <li>
       <a href="/docs/feui/guide/component/pullrefresh.html" class="sidebar-link">Pullrefresh 刷新加载</a>
-    </li>
-  
-    
-    
-      
-      
-      
-      
-      
-      
-    
-    
-    <li>
-      <a href="/docs/feui/guide/component/input.html" class="sidebar-link">输入框 input</a>
     </li>
   
     
@@ -513,7 +513,7 @@
     <div id='pContent'>
       <p><a href="https://feui.gitee.io/#/inlinecalendar">Live Demo&gt;&gt;</a></p>
 <h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Inlinecalendar &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Inlinecalendar.name]: Inlinecalendar</div><div class="line">&#125;</div><div class="line">data () &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    show: <span class="literal">true</span>,</div><div class="line">    value: [<span class="string">'2018-11-10'</span>,<span class="string">'2018-11-11'</span>,<span class="string">'2018-11-12'</span>],</div><div class="line">    listValue: <span class="string">''</span>,</div><div class="line">    range: <span class="literal">false</span>,</div><div class="line">    showLastMonth: <span class="literal">true</span>,</div><div class="line">    showNextMonth: <span class="literal">true</span>,</div><div class="line">    highlightWeekend: <span class="literal">false</span>,</div><div class="line">    return6Rows: <span class="literal">true</span>,</div><div class="line">    hideHeader: <span class="literal">false</span>,</div><div class="line">    hideWeekList: <span class="literal">false</span>,</div><div class="line">    replaceTextList: &#123;&#125;,</div><div class="line">    replace: <span class="literal">false</span>,</div><div class="line">    changeWeeksList: <span class="literal">false</span>,</div><div class="line">    weeksList: [],</div><div class="line">    useCustomFn: <span class="literal">false</span>,</div><div class="line">    buildSlotFn: <span class="function"><span class="params">()</span> =&gt;</span> <span class="string">''</span>,</div><div class="line">    disablePast: <span class="literal">false</span>,</div><div class="line">    disableFuture: <span class="literal">false</span>,</div><div class="line">    disableWeekend: <span class="literal">false</span>,</div><div class="line">    disableDateFunction (date) &#123;</div><div class="line">      <span class="keyword">if</span> (date.formatedDate === <span class="string">'2017-10-16'</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
-<h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-inlinecalendar</span></span></div><div class="line"><span class="tag">  <span class="attr">ref</span>=<span class="string">"calendar"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">"onChange"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-view-change</span>=<span class="string">"onViewChange"</span></span></div><div class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">"inline-calendar-demo"</span></span></div><div class="line"><span class="tag">  <span class="attr">:show.sync</span>=<span class="string">"show"</span></span></div><div class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"value"</span></span></div><div class="line"><span class="tag">  <span class="attr">start-date</span>=<span class="string">"2016-04-21"</span></span></div><div class="line"><span class="tag">  <span class="attr">end-date</span>=<span class="string">"2018-11-11"</span></span></div><div class="line"><span class="tag">  <span class="attr">:range</span>=<span class="string">"range"</span></span></div><div class="line"><span class="tag">  <span class="attr">:show-last-month</span>=<span class="string">"showLastMonth"</span></span></div><div class="line"><span class="tag">  <span class="attr">:show-next-month</span>=<span class="string">"showNextMonth"</span></span></div><div class="line"><span class="tag">  <span class="attr">:highlight-weekend</span>=<span class="string">"highlightWeekend"</span></span></div><div class="line"><span class="tag">  <span class="attr">:return-six-rows</span>=<span class="string">"return6Rows"</span></span></div><div class="line"><span class="tag">  <span class="attr">:hide-header</span>=<span class="string">"hideHeader"</span></span></div><div class="line"><span class="tag">  <span class="attr">:hide-week-list</span>=<span class="string">"hideWeekList"</span></span></div><div class="line"><span class="tag">  <span class="attr">:replace-text-list</span>=<span class="string">"replaceTextList"</span></span></div><div class="line"><span class="tag">  <span class="attr">:weeks-list</span>=<span class="string">"weeksList"</span></span></div><div class="line"><span class="tag">  <span class="attr">:render-function</span>=<span class="string">"buildSlotFn"</span></span></div><div class="line"><span class="tag">  <span class="attr">:disable-past</span>=<span class="string">"disablePast"</span></span></div><div class="line"><span class="tag">  <span class="attr">:disable-future</span>=<span class="string">"disableFuture"</span></span></div><div class="line"><span class="tag">  <span class="attr">:disable-weekend</span>=<span class="string">"disableWeekend"</span></span></div><div class="line"><span class="tag">  <span class="attr">:disable-date-function</span>=<span class="string">"disableDateFunction"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-inlinecalendar</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-inlinecalendar</span></span></div><div class="line"><span class="tag">  <span class="attr">ref</span>=<span class="string">"calendar"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">"onChange"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-view-change</span>=<span class="string">"onViewChange"</span></span></div><div class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">"inline-calendar-demo"</span></span></div><div class="line"><span class="tag">  <span class="attr">:show.sync</span>=<span class="string">"show"</span></span></div><div class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"value"</span></span></div><div class="line"><span class="tag">  <span class="attr">start-date</span>=<span class="string">"2016-04-21"</span></span></div><div class="line"><span class="tag">  <span class="attr">end-date</span>=<span class="string">"2018-11-11"</span></span></div><div class="line"><span class="tag">  <span class="attr">:range</span>=<span class="string">"range"</span></span></div><div class="line"><span class="tag">  <span class="attr">:show-last-month</span>=<span class="string">"showLastMonth"</span></span></div><div class="line"><span class="tag">  <span class="attr">:show-next-month</span>=<span class="string">"showNextMonth"</span></span></div><div class="line"><span class="tag">  <span class="attr">:highlight-weekend</span>=<span class="string">"highlightWeekend"</span></span></div><div class="line"><span class="tag">  <span class="attr">:return-six-rows</span>=<span class="string">"return6Rows"</span></span></div><div class="line"><span class="tag">  <span class="attr">:hide-header</span>=<span class="string">"hideHeader"</span></span></div><div class="line"><span class="tag">  <span class="attr">:hide-week-list</span>=<span class="string">"hideWeekList"</span></span></div><div class="line"><span class="tag">  <span class="attr">:replace-text-list</span>=<span class="string">"replaceTextList"</span></span></div><div class="line"><span class="tag">  <span class="attr">:weeks-list</span>=<span class="string">"weeksList"</span></span></div><div class="line"><span class="tag">  <span class="attr">:render-function</span>=<span class="string">"buildSlotFn"</span></span></div><div class="line"><span class="tag">  <span class="attr">:disable-past</span>=<span class="string">"disablePast"</span></span></div><div class="line"><span class="tag">  <span class="attr">:disable-future</span>=<span class="string">"disableFuture"</span></span></div><div class="line"><span class="tag">  <span class="attr">:disable-weekend</span>=<span class="string">"disableWeekend"</span></span></div><div class="line"><span class="tag">  <span class="attr">:disable-date-function</span>=<span class="string">"disableDateFunction"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-inlinecalendar</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -665,6 +665,13 @@
 <td>-</td>
 <td>-</td>
 </tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
 </tbody>
 </table>
 <h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
@@ -679,6 +686,11 @@
 <tr>
 <td>each-day</td>
 <td>用以自定义每一天的显示渲染，推荐使用该 slot 来替代 render-function</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -700,15 +712,15 @@
 <td>-</td>
 </tr>
 <tr>
-<td>on-view-change</td>
-<td><code>data, index</code></td>
-<td>渲染月份变化时触发。初始化时会触发一次，如果不希望处理<br>初始化时的触发，可以检查第二个参数是否为 0</td>
-<td>-</td>
-</tr>
-<tr>
 <td>on-select-single-date</td>
 <td><code>currentValue</code></td>
 <td>单选模式下选中日期时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -747,6 +759,12 @@
 <td>渲染当前值所在月份</td>
 <td>-</td>
 </tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
 </tbody>
 </table>
 
@@ -756,6 +774,8 @@
         
           <span>← <a href="/docs/feui/guide/component/indexlist.html">Indexlist 分类列表</a></span>
         
+        
+          <span style="float: right;"><a href="/docs/feui/guide/component/input.html">input 输入框</a> →</span>
         
       </div>
     
