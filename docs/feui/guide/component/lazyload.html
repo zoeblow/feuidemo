@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Pullrefresh 刷新加载 — Feui</title>
+    <title>Lazyload 懒加载 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -465,7 +465,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/lazyload.html" class="sidebar-link new">Lazyload 懒加载</a>
+      <a href="/docs/feui/guide/component/lazyload.html" class="sidebar-link current new">Lazyload 懒加载</a>
     </li>
   
     
@@ -479,7 +479,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/pullrefresh.html" class="sidebar-link current">Pullrefresh 刷新加载</a>
+      <a href="/docs/feui/guide/component/pullrefresh.html" class="sidebar-link">Pullrefresh 刷新加载</a>
     </li>
   
     
@@ -522,27 +522,35 @@
 
 
 
-<div  id='content' class="content guide with-sidebar pullrefresh-guide">
+<div  id='content' class="content guide with-sidebar lazyload-guide">
   <div class='content_box'>
     
-      <h1>Pullrefresh 刷新加载</h1>
+      <h1>Lazyload 懒加载</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/pullrefresh">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><blockquote>
-<p>该组件目前已经升级为<code>Scroll</code>,请移步<a href="https://feui.gitee.io/#/Scroll">Scroll</a></p>
+      <p><a href="https://feui.gitee.io/#/lazyload">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><p><strong>main.js</strong><br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> &#123; Lazyload &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">Vue.use(Lazyload, &#123;</div><div class="line">  lazyComponent: <span class="literal">true</span>,</div><div class="line">  <span class="comment">//失败时显示</span></div><div class="line">  error: <span class="string">"https://i.loli.net/2018/01/29/5a6e858413275.png"</span>,</div><div class="line">  <span class="comment">//loading图</span></div><div class="line">  loading: <span class="string">"https://i.loli.net/2018/01/29/5a6e858463317.gif"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>pages</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-tag">img</span>,<span class="selector-tag">div</span><span class="selector-attr">[lazy]</span> &#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">15px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span> <span class="number">0</span>;</div><div class="line">  <span class="attribute">background-color</span>: white;</div><div class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2);</div><div class="line">  <span class="attribute">background-size</span>: <span class="number">315px</span> <span class="number">250px</span>;</div><div class="line">  <span class="attribute">background-position</span>: <span class="number">15px</span>;</div><div class="line">  <span class="attribute">background-repeat</span>: no-repeat;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.lazyback</span>&#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data () &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    imageList: [</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/22/5a657b6d542d4.jpg'</span>,</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/22/5a657b718c766.jpg'</span>,</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/22/5a657b7140692.jpg'</span>,</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/22/5a657b62a72bb.jpg'</span></div><div class="line">    ],</div><div class="line">    backgroundImageList: [</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/29/5a6e94028cdd0.jpg'</span>,</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/29/5a6e9402daf3a.jpg'</span>,</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/29/5a6e94051e657.jpg'</span></div><div class="line">    ],</div><div class="line">    componentImageList: [</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/22/5a657b6118e21.jpg'</span>,</div><div class="line">      <span class="string">'https://i.loli.net/2018/01/22/5a657b62f3c8b.jpg'</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"iPad Pro"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">v-for</span>=<span class="string">"img in imageList"</span> <span class="attr">v-lazy</span>=<span class="string">"img"</span> <span class="attr">:key</span>=<span class="string">'img'</span>  /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="懒加载背景图"><a href="#懒加载背景图" class="headerlink" title="懒加载背景图"></a>懒加载背景图</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"iPhone 8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"img in backgroundImageList"</span> <span class="attr">class</span>=<span class="string">'lazyback'</span> </span></div><div class="line"><span class="tag">  <span class="attr">v-lazy:background-image</span>=<span class="string">"img"</span> <span class="attr">:key</span>=<span class="string">'img'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="懒加载背景图-1"><a href="#懒加载背景图-1" class="headerlink" title="懒加载背景图"></a>懒加载背景图</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"MacBook Pro"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">lazy-component</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">v-for</span>=<span class="string">"img in componentImageList"</span> <span class="attr">v-lazy</span>=<span class="string">"img"</span> <span class="attr">:key</span>=<span class="string">'img'</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">lazy-component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><blockquote>
+<p>该组件详细文档,请移步<a href="https://github.com/hilongjw/vue-lazyload#constructor-options" target="_blank" rel="external">vue-lazyload 文档</a></p>
 </blockquote>
 
     </div>
     
       <div class="guide-links">
         
+          <span>← <a href="/docs/feui/guide/component/input.html">input 输入框</a></span>
+        
         
       </div>
     
     <div class="footer">
       文件翻译错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/pullrefresh.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/lazyload.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
