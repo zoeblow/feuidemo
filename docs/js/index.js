@@ -91,6 +91,6 @@ if (pathname.indexOf("guide") >= 0){
 
   function updateProgress(perc) {
     $prog2.style.width = perc * 100 + "%";
-    // console.log(perc * 100 + "%");
+    console.log(perc * 100 + "%");
   }
 })();
