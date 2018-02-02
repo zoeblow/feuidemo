@@ -543,8 +543,15 @@
     
     <div id='pContent'>
       <p><a href="https://feui.gitee.io/#/actionsheet">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Actionsheet &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Actionsheet.name]: Actionsheet</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-actionsheet</span> &gt;</span><span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Actionsheet &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Actionsheet.name]: Actionsheet</div><div class="line">&#125;</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    show1: <span class="literal">false</span>,    <span class="attr">show2</span>: <span class="literal">false</span>,    <span class="attr">show3</span>: <span class="literal">false</span>,    <span class="attr">show4</span>: <span class="literal">false</span>,</div><div class="line">    headerSlot: tips,</div><div class="line">    menus1: &#123; <span class="attr">menu1</span>: <span class="string">"分享给朋友"</span>,</div><div class="line">      ...</div><div class="line">    &#125;,</div><div class="line">    menus5: [</div><div class="line">      &#123;<span class="attr">label</span>: tips, <span class="attr">type</span>: <span class="string">"info"</span> &#125;,</div><div class="line">      ...</div><div class="line">    ],</div><div class="line">    menus8: &#123; <span class="attr">menu1</span>: <span class="string">"点我关闭"</span>,</div><div class="line">      ...</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"基本使用"</span> <span class="attr">v-model</span>=<span class="string">"show1"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-actionsheet</span> <span class="attr">v-model</span>=<span class="string">"show1"</span> <span class="attr">:menus</span>=<span class="string">"menus1"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-click-menu</span>=<span class="string">"click"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="Android样式"><a href="#Android样式" class="headerlink" title="Android样式"></a>Android样式</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"Android样式"</span> <span class="attr">v-model</span>=<span class="string">"show7"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-actionsheet</span> <span class="attr">v-model</span>=<span class="string">"show7"</span> <span class="attr">:menus</span>=<span class="string">"menus7"</span> </span></div><div class="line"><span class="tag">  <span class="attr">theme</span>=<span class="string">"android"</span> @<span class="attr">on-click-menu</span>=<span class="string">"click"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="显示取消菜单"><a href="#显示取消菜单" class="headerlink" title="显示取消菜单"></a>显示取消菜单</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"显示取消菜单"</span> <span class="attr">v-model</span>=<span class="string">"show2"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-actionsheet</span> <span class="attr">v-model</span>=<span class="string">"show2"</span> <span class="attr">:menus</span>=<span class="string">"menus2"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-click-menu</span>=<span class="string">"click"</span> <span class="attr">show-cancel</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="使用数组定义菜单"><a href="#使用数组定义菜单" class="headerlink" title="使用数组定义菜单"></a>使用数组定义菜单</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"使用数组定义菜单"</span> <span class="attr">v-model</span>=<span class="string">"show5"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-actionsheet</span> <span class="attr">v-model</span>=<span class="string">"show5"</span> <span class="attr">:menus</span>=<span class="string">"menus5"</span> <span class="attr">show-cancel</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-click-menu</span>=<span class="string">"click"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="点击遮罩区域不自动关闭"><a href="#点击遮罩区域不自动关闭" class="headerlink" title="点击遮罩区域不自动关闭"></a>点击遮罩区域不自动关闭</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"点击遮罩区域不自动关闭"</span> <span class="attr">v-model</span>=<span class="string">"show4"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-actionsheet</span> <span class="attr">v-model</span>=<span class="string">"show4"</span> <span class="attr">:menus</span>=<span class="string">"menus1"</span></span></div><div class="line"><span class="tag">  <span class="attr">:close-on-clicking-mask</span>=<span class="string">"false"</span> <span class="attr">show-cancel</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="显示提示文字"><a href="#显示提示文字" class="headerlink" title="显示提示文字"></a>显示提示文字</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"显示提示文字"</span> <span class="attr">v-model</span>=<span class="string">"show3"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-actionsheet</span> <span class="attr">v-model</span>=<span class="string">"show3"</span> <span class="attr">:menus</span>=<span class="string">"menus3"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-click-menu</span>=<span class="string">"click"</span> @<span class="attr">on-click-menu-delete</span>=<span class="string">"onDelete"</span></span></div><div class="line"><span class="tag">  <span class="attr">show-cancel</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="使用headerSlot"><a href="#使用headerSlot" class="headerlink" title="使用headerSlot"></a>使用headerSlot</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"使用header Slot"</span> <span class="attr">v-model</span>=<span class="string">"show6"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-actionsheet</span> <span class="attr">v-model</span>=<span class="string">"show6"</span> <span class="attr">:menus</span>=<span class="string">"menus1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">slot</span>=<span class="string">"header"</span> <span class="attr">v-html</span>=<span class="string">"headerSlot"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="不自动关闭"><a href="#不自动关闭" class="headerlink" title="不自动关闭"></a>不自动关闭</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"不自动关闭"</span> <span class="attr">v-model</span>=<span class="string">"show6"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-transfer-dom</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-actionsheet</span> <span class="attr">v-model</span>=<span class="string">"show8"</span> <span class="attr">:menus</span>=<span class="string">"menus8"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-click-menu</span>=<span class="string">"demo8doClose"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:close-on-clicking-mask</span>=<span class="string">"false"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:close-on-clicking-menu</span>=<span class="string">"false"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-actionsheet</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -557,10 +564,114 @@
 </thead>
 <tbody>
 <tr>
+<td>value</td>
+<td>是否显示, 使用 v-model 绑定变量</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>show-cancel</td>
+<td>是否显示取消菜单，对安卓风格无效</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>cancel-text</td>
+<td>取消菜单的显示文字</td>
+<td><code>String</code></td>
+<td><code>取消</code></td>
 <td>-</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>菜单风格</td>
+<td><code>String</code></td>
+<td><code>ios</code></td>
+<td><code>ios</code>,<code>android</code></td>
+</tr>
+<tr>
+<td>menus</td>
+<td>菜单项列表 ,举例：{menu1: ‘删除’}，如果名字上带有.noop表明这是<br>纯文本(HTML)展示，不会触发事件，用于展示描述或者提醒。<br>详见下面<strong>menus的说明</strong></td>
+<td><code>Array</code>,<code>Object</code></td>
+<td><code>{}</code></td>
 <td>-</td>
+</tr>
+<tr>
+<td>close-on-clicking-mask</td>
+<td>点击遮罩时是否关闭菜单</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>close-on-clicking-menu</td>
+<td>点击菜单时是否自动隐藏</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
+<thead>
+<tr>
+<th>事件名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>on-click-menu</td>
+<td><code>menuKey</code>, <code>menuItem</code></td>
+<td>点击菜单时触发</td>
 <td>-</td>
+</tr>
+<tr>
+<td>on-click-menu-cancel</td>
 <td>-</td>
+<td>点击取消菜单时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-click-mask</td>
+<td>-</td>
+<td>点击遮罩时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-click-menu-{menuKey}</td>
+<td><code>menuKey</code></td>
+<td>点击事件的快捷方式, menuKey与label的值有关，<br>详见下面<strong>menus的说明</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="menus的说明"><a href="#menus的说明" class="headerlink" title="menus的说明"></a>menus的说明</h4><table>
+<thead>
+<tr>
+<th>Key值</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label</td>
+<td>菜单名字，支持文字及html。</td>
+<td>-</td>
+</tr>
+<tr>
+<td>value</td>
+<td>英文字符，表示触发事件的名字，如果不设置不会触发on-click-menu事件</td>
+<td>-</td>
+</tr>
+<tr>
+<td>type</td>
+<td>类型,对应响应的预设样式<br><code>primary</code>：默认色，<br><code>warn</code>：警告，<br><code>disabled</code>：不可操作，灰色。点击时不会关闭，<br><code>info</code>：信息提示，点击时不会关闭</td>
 <td>-</td>
 </tr>
 </tbody>
