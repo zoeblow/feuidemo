@@ -481,6 +481,10 @@ a {
   font-size: 20px;
 }
 
+.content table h3 {
+  margin: 10px 0em;
+}
+
 .content h4 {
   margin: 15px 0 1.2em;
   position: relative;

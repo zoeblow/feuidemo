@@ -58,7 +58,7 @@
     
     
     <li>
-      <a href="/docs/404.html" class="sidebar-link"></a>
+      <a href="/docs/404.html" class="sidebar-link current"></a>
     </li>
   
 </ul>
@@ -73,12 +73,86 @@
   <div class='content_box'>
     
     <div id='pContent'>
-      
+      <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>404</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    a {
+      /* text-decoration: #C85F5F; */
+      color: #ce7171;
+    }
+
+    body {
+      height: 100%;
+      font-size: 1.0625rem;
+      background: #fff;
+    }
+
+    .Error {
+      text-align: center;
+      width: 500px;
+      height: 300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -150px;
+      margin-left: -250px;
+    }
+
+    .error-type {
+      font-size: 5em;
+      color: #C85F5F;
+    }
+
+    .error-issue {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <section class="Error">
+      <div class="error-type">404</div>
+      <div class="error-issue">
+        没找到页面呢 >>
+        <a class="Forum-button" href="javascript:history.go(-1);" type="button" target="_blank" rel="external">
+          <span class="Button-content">返回</span>
+        </a>
+      </div>
+      <br>
+      <div class="error-issue">
+        查看文档请 >>
+        <a class="Forum-button" href="https://feui.gitee.io/docs/feui/guide/" type="button">
+          <span class="Button-content">文档首页</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
     </div>
     
     <div class="footer">
       文件翻译错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/archives/index.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/404.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
