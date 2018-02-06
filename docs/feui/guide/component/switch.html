@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>QRcode 二维码 — Feui</title>
+    <title>Switch 开关 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -239,7 +239,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/qrcode.html" class="sidebar-link current">QRcode 二维码</a>
+      <a href="/docs/feui/guide/component/qrcode.html" class="sidebar-link">QRcode 二维码</a>
     </li>
   
     
@@ -521,7 +521,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/switch.html" class="sidebar-link new">Switch 开关</a>
+      <a href="/docs/feui/guide/component/switch.html" class="sidebar-link current new">Switch 开关</a>
     </li>
   
     
@@ -564,19 +564,22 @@
 
 
 
-<div  id='content' class="content guide with-sidebar qrcode-guide">
+<div  id='content' class="content guide with-sidebar switch-guide">
   <div class='content_box'>
     
-      <h1>QRcode 二维码</h1>
+      <h1>Switch 开关</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/qrcode">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Qrcode &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Qrcode.name]: Qrcode</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="二维码尺寸-200px"><a href="#二维码尺寸-200px" class="headerlink" title="二维码尺寸 200px"></a>二维码尺寸 200px</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span> <span class="attr">size</span>=<span class="string">"200"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="canvas类型"><a href="#canvas类型" class="headerlink" title="canvas类型"></a>canvas类型</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span> <span class="attr">type</span>=<span class="string">"canvas"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="二维码颜色-红色"><a href="#二维码颜色-红色" class="headerlink" title="二维码颜色 红色"></a>二维码颜色 红色</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span> <span class="attr">fg-color</span>=<span class="string">"#ff0000"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="二维码背景颜色-灰色"><a href="#二维码背景颜色-灰色" class="headerlink" title="二维码背景颜色 灰色"></a>二维码背景颜色 灰色</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-qrcode</span> <span class="attr">value</span>=<span class="string">"https://feui.gitee.io"</span> <span class="attr">fg-color</span>=<span class="string">"#cccccc"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-qrcode</span>&gt;</span></div></pre></td></tr></table></figure>
+      <p><a href="https://feui.gitee.io/#/switch">Live Demo&gt;&gt;</a></p>
+<blockquote>
+<p><code>fe-count</code> 请在<code>fe-group</code>中使用。</p>
+</blockquote>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Switch &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Switch.name]: Switch</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    defaultT: <span class="literal">true</span>,</div><div class="line">    defaultF: <span class="literal">false</span>,</div><div class="line">    stringValue: <span class="string">'0'</span></div><div class="line">  &#125;;</div><div class="line">&#125;,</div><div class="line">methods: &#123;</div><div class="line">  onClick (newVal, oldVal) &#123;</div><div class="line">    <span class="built_in">console</span>.log(newVal, oldVal)</div><div class="line">    Toast.loading(&#123;</div><div class="line">      duration: <span class="number">1000</span>,</div><div class="line">      message: <span class="string">"处理中..."</span></div><div class="line">    &#125;);</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.defaultF = newVal</div><div class="line">    &#125;, <span class="number">1000</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">'一般使用'</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认false"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认true"</span>  <span class="attr">:inline-desc</span>=<span class="string">"defaultT + ''"</span> <span class="attr">v-model</span>=<span class="string">"defaultT"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="不可用状态"><a href="#不可用状态" class="headerlink" title="不可用状态"></a>不可用状态</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"disabled"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认false"</span> <span class="attr">disabled</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认true"</span> <span class="attr">:value</span>=<span class="string">"true"</span> <span class="attr">disabled</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="自定义选中颜色"><a href="#自定义选中颜色" class="headerlink" title="自定义选中颜色"></a>自定义选中颜色</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置title 颜色"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span>  <span class="attr">title</span>=<span class="string">"&lt;span style='color:red'&gt;我的颜色&lt;/span&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"阻止默认"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认false"</span> <span class="attr">prevent-default</span> <span class="attr">v-model</span>=<span class="string">"defaultF"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-click</span>=<span class="string">"onClick"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="自定义占位符和标签"><a href="#自定义占位符和标签" class="headerlink" title="自定义占位符和标签"></a>自定义占位符和标签</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"值转换 map"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认true"</span> <span class="attr">:value-map</span>=<span class="string">"['0', '1']"</span> </span></div><div class="line"><span class="tag">    <span class="attr">v-model</span>=<span class="string">"stringValue"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"值"</span> <span class="attr">:value</span>=<span class="string">"typeof stringValue + ' ' + stringValue"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -589,39 +592,83 @@
 </thead>
 <tbody>
 <tr>
+<td>title</td>
+<td><code>label</code>显示的文字</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
 <td>value</td>
-<td>编码内容，如果为链接，请保证有http(s)协议名</td>
+<td>表单值, 使用v-model绑定</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否可用选择</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>inline-desc</td>
+<td>标签下显示的文字</td>
 <td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>size</td>
-<td>二维码尺寸</td>
-<td><code>Number</code></td>
-<td><code>160</code></td>
-<td>像素(px)</td>
+<td>prevent-default</td>
+<td>阻止点击时自动设定值</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
 </tr>
 <tr>
-<td>bg-color</td>
-<td>二维码背景颜色</td>
-<td><code>String</code></td>
-<td><code>#FFFFFF</code></td>
+<td>value-map</td>
+<td>用于自定义 false 和 true 映射的实际值</td>
+<td><code>Array</code></td>
+<td><code>[false, true]</code></td>
 <td>-</td>
 </tr>
 <tr>
-<td>fg-color</td>
-<td>二维码颜色</td>
-<td><code>String</code></td>
-<td><code>#000000</code></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
+<thead>
+<tr>
+<th>事件名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>on-change</td>
+<td><code>value</code></td>
+<td>值变化时触发，参数为 (currentValue)</td>
 <td>-</td>
 </tr>
 <tr>
-<td>type</td>
-<td>渲染类型</td>
-<td><code>String</code></td>
-<td><code>img</code></td>
-<td><code>canvas</code>,<code>img</code></td>
+<td>on-click</td>
+<td><code>newVal</code>, <code>oldVal</code></td>
+<td>点击组件时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
@@ -630,16 +677,14 @@
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/icon.html">Icon 图标</a></span>
+          <span>← <a href="/docs/feui/guide/component/radio.html">Radio 单选按钮</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/range.html">Range 滑块</a> →</span>
         
       </div>
     
     <div class="footer">
       文件翻译错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/qrcode.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/switch.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
