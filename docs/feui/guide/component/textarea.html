@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Switch 开关 — Feui</title>
+    <title>Textarea 文本域 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -521,7 +521,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/switch.html" class="sidebar-link current">Switch 开关</a>
+      <a href="/docs/feui/guide/component/switch.html" class="sidebar-link">Switch 开关</a>
     </li>
   
     
@@ -535,7 +535,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/textarea.html" class="sidebar-link new">Textarea 文本域</a>
+      <a href="/docs/feui/guide/component/textarea.html" class="sidebar-link current new">Textarea 文本域</a>
     </li>
   
     
@@ -578,22 +578,22 @@
 
 
 
-<div  id='content' class="content guide with-sidebar switch-guide">
+<div  id='content' class="content guide with-sidebar textarea-guide">
   <div class='content_box'>
     
-      <h1>Switch 开关</h1>
+      <h1>Textarea 文本域</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/switch">Live Demo&gt;&gt;</a></p>
+      <p><a href="https://feui.gitee.io/#/textarea">Live Demo&gt;&gt;</a></p>
 <blockquote>
 <p><code>fe-count</code> 请在<code>fe-group</code>中使用。</p>
 </blockquote>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Switch &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Switch.name]: Switch</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    defaultT: <span class="literal">true</span>,</div><div class="line">    defaultF: <span class="literal">false</span>,</div><div class="line">    stringValue: <span class="string">'0'</span></div><div class="line">  &#125;;</div><div class="line">&#125;,</div><div class="line">methods: &#123;</div><div class="line">  onClick (newVal, oldVal) &#123;</div><div class="line">    <span class="built_in">console</span>.log(newVal, oldVal)</div><div class="line">    Toast.loading(&#123;</div><div class="line">      duration: <span class="number">1000</span>,</div><div class="line">      message: <span class="string">"处理中..."</span></div><div class="line">    &#125;);</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.defaultF = newVal</div><div class="line">    &#125;, <span class="number">1000</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">'一般使用'</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认false"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认true"</span>  <span class="attr">:inline-desc</span>=<span class="string">"defaultT + ''"</span> <span class="attr">v-model</span>=<span class="string">"defaultT"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="不可用状态"><a href="#不可用状态" class="headerlink" title="不可用状态"></a>不可用状态</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"disabled"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认false"</span> <span class="attr">disabled</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认true"</span> <span class="attr">:value</span>=<span class="string">"true"</span> <span class="attr">disabled</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="自定义选中颜色"><a href="#自定义选中颜色" class="headerlink" title="自定义选中颜色"></a>自定义选中颜色</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置title 颜色"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span>  <span class="attr">title</span>=<span class="string">"&lt;span style='color:red'&gt;我的颜色&lt;/span&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"阻止默认"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认false"</span> <span class="attr">prevent-default</span> <span class="attr">v-model</span>=<span class="string">"defaultF"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-click</span>=<span class="string">"onClick"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="自定义占位符和标签"><a href="#自定义占位符和标签" class="headerlink" title="自定义占位符和标签"></a>自定义占位符和标签</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"值转换 map"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"默认true"</span> <span class="attr">:value-map</span>=<span class="string">"['0', '1']"</span> </span></div><div class="line"><span class="tag">    <span class="attr">v-model</span>=<span class="string">"stringValue"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"值"</span> <span class="attr">:value</span>=<span class="string">"typeof stringValue + ' ' + stringValue"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Textarea &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Textarea.name]: Textarea</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    placeholder: <span class="string">"占位符"</span>,</div><div class="line">    title: <span class="string">"标题"</span></div><div class="line">  &#125;;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-textarea</span> <span class="attr">:max</span>=<span class="string">"20"</span> <span class="attr">:placeholder</span>=<span class="string">"placeholder"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-focus</span>=<span class="string">"onEvent('focus')"</span> @<span class="attr">on-blur</span>=<span class="string">"onEvent('blur')"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="和input一起使用"><a href="#和input一起使用" class="headerlink" title="和input一起使用"></a>和input一起使用</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"和input一起使用"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-input</span> <span class="attr">:placeholder</span>=<span class="string">"title"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-input</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-textarea</span> <span class="attr">:max</span>=<span class="string">"200"</span> <span class="attr">name</span>=<span class="string">"description"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:placeholder</span>=<span class="string">"placeholder"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="不显示计数器"><a href="#不显示计数器" class="headerlink" title="不显示计数器"></a>不显示计数器</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"不显示计数器"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-textarea</span> <span class="attr">:max</span>=<span class="string">"200"</span> <span class="attr">name</span>=<span class="string">"detail"</span> <span class="attr">:placeholder</span>=<span class="string">"placeholder"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:show-counter</span>=<span class="string">"false"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="自动高度"><a href="#自动高度" class="headerlink" title="自动高度"></a>自动高度</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"自动高度"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-textarea</span> <span class="attr">:placeholder</span>=<span class="string">"placeholder"</span> <span class="attr">:show-counter</span>=<span class="string">"false"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:rows</span>=<span class="string">"1"</span> <span class="attr">autosize</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-textarea</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-textarea</span> <span class="attr">:title</span>=<span class="string">"title"</span> <span class="attr">:placeholder</span>=<span class="string">"placeholder"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:show-counter</span>=<span class="string">"false"</span> <span class="attr">:rows</span>=<span class="string">"1"</span> <span class="attr">autosize</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="设定固定高度"><a href="#设定固定高度" class="headerlink" title="设定固定高度"></a>设定固定高度</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置高度为200像素"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-textarea</span> <span class="attr">:title</span>=<span class="string">"title"</span> <span class="attr">:max</span>=<span class="string">"200"</span> <span class="attr">:placeholder</span>=<span class="string">"placeholder"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:show-counter</span>=<span class="string">"false"</span> <span class="attr">:height</span>=<span class="string">"200"</span> <span class="attr">:rows</span>=<span class="string">"8"</span> <span class="attr">:cols</span>=<span class="string">"30"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -606,50 +606,112 @@
 </thead>
 <tbody>
 <tr>
-<td>title</td>
-<td><code>label</code>显示的文字</td>
+<td>value</td>
+<td>表单值, 使用v-model绑定</td>
 <td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>value</td>
-<td>表单值, 使用v-model绑定</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>false</code>,<code>true</code></td>
-</tr>
-<tr>
-<td>disabled</td>
-<td>是否可用选择</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>false</code>,<code>true</code></td>
+<td>title</td>
+<td>label文字</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
 <td>inline-desc</td>
-<td>标签下显示的文字</td>
+<td>位于标题下的描述文字</td>
 <td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>prevent-default</td>
-<td>阻止点击时自动设定值</td>
+<td>show-counter</td>
+<td>是否显示计数</td>
 <td><code>Boolean</code></td>
 <td><code>false</code></td>
 <td><code>false</code>,<code>true</code></td>
 </tr>
 <tr>
-<td>value-map</td>
-<td>用于自定义 false 和 true 映射的实际值</td>
-<td><code>Array</code></td>
-<td><code>[false, true]</code></td>
+<td>max</td>
+<td>最大长度限制</td>
+<td><code>Number</code></td>
+<td><code>0</code></td>
 <td>-</td>
 </tr>
 <tr>
+<td>name</td>
+<td>表单名字</td>
+<td><code>String</code></td>
 <td>-</td>
 <td>-</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>没有值时的提示文字</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>rows</td>
+<td>textarea 标准属性<code>rows</code></td>
+<td><code>Number</code></td>
+<td><code>3</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>cols</td>
+<td>textarea 标准属性<code>cols</code></td>
+<td><code>Number</code></td>
+<td><code>30</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>height</td>
+<td>高度</td>
+<td><code>Number</code></td>
+<td><code>0</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>readonly</td>
+<td>textarea 标签属性<code>readonly</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>autosize</td>
+<td>是否根据内容自动设置高度</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+</tbody>
+</table>
+<p>| - | - | - | - | - |</p>
+<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th>Slot名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label</td>
+<td>用于自定义label(即 title)部分内容</td>
+<td>-</td>
+</tr>
+<tr>
+<td>restricted-label</td>
+<td>用于自定义label部分，和slot=label不同的是，<br>该slot宽度受到父组件group的限制</td>
+<td>-</td>
+</tr>
+<tr>
 <td>-</td>
 <td>-</td>
 <td>-</td>
@@ -669,13 +731,19 @@
 <tr>
 <td>on-change</td>
 <td><code>value</code></td>
-<td>值变化时触发，参数为 (currentValue)</td>
+<td>表单值变化时触发</td>
 <td>-</td>
 </tr>
 <tr>
-<td>on-click</td>
-<td><code>newVal</code>, <code>oldVal</code></td>
-<td>点击组件时触发</td>
+<td>on-focus</td>
+<td>-</td>
+<td><code>focus</code>事件</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-blur</td>
+<td>-</td>
+<td><code>blur</code>事件</td>
 <td>-</td>
 </tr>
 <tr>
@@ -686,21 +754,37 @@
 </tr>
 </tbody>
 </table>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>updateAutosize</td>
+<td>-</td>
+<td>重置 autosize 高度</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
     </div>
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/radio.html">Radio 单选按钮</a></span>
+          <span>← <a href="/docs/feui/guide/component/switch.html">Switch 开关</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/textarea.html">Textarea 文本域</a> →</span>
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/switch.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/textarea.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
