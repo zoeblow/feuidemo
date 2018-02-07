@@ -426,6 +426,7 @@ a {
   position: relative;
   padding-bottom: 75px;
   padding: 30px;
+  overflow: auto;
 }
 
 .content a.button {
@@ -567,8 +568,11 @@ a {
   font-size: 13px;
   line-height: 1.5;
   overflow-x: auto;
+  display: table;
 }
-
+.content .content_box #pContent > table *{
+  box-sizing: border-box;
+}
 .content .content_box #pContent > table td,
 .content .content_box #pContent > table th {
   line-height: 1.5em;
@@ -811,7 +815,7 @@ pre .prompt {
     text-align: center;
     position: relative;
     height: auto;
-    padding: 10px 0;
+    padding: 10px 0 0;
     z-index: 1000001;
   }
   #header #mobile {
@@ -866,10 +870,19 @@ pre .prompt {
     background: #fff;
     height: auto;
     position: static;
+    border-top: 1px solid #eaeaea;
   }
   #nav li {
     display: block;
     border-bottom: 1px solid #eaeaea;
+    margin: 0;
+  }
+  #nav li:last-child {
+    border-bottom: 0 none;
+  }
+  #nav li a{
+    display: inline-block;
+    width: 100%;
   }
   #hexo .left,
   #hexo .right {
@@ -880,23 +893,31 @@ pre .prompt {
     float: none;
     margin-right: 0px;
   }
-  #highlights {
+  #hexo .button:first-child {
+    margin-right: 0;
   }
   #highlights .point {
     width: 100%;
     border-bottom: 1px solid #eaeaea;
     padding: 1em 0;
   }
+  #footer .links {
+    margin-bottom: 10px;
+  }
   #footer .links a {
     display: inline-block;
     width: 48%;
     line-height: 30px;
+    color: #cacaca;
   }
   /* guide pages */
   .main-content {
     margin: 0 5px;
     display: block;
     position: relative;
+  }
+  .content .content_box #pContent > table{
+    display: block;
   }
   .main-content .sidebar {
     display: none;
