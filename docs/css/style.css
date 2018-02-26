@@ -692,6 +692,9 @@ a {
 #footer a {
   color: #fff;
 }
+#footer a:hover {
+  border-bottom: 2px solid #fff;
+}
 
 #footer p {
   line-height: 1.5;
