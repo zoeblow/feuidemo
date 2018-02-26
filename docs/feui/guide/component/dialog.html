@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Indexlist 分类列表 — Feui</title>
+    <title>Dialog 弹窗 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -423,7 +423,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/indexlist.html" class="sidebar-link current">Indexlist 分类列表</a>
+      <a href="/docs/feui/guide/component/indexlist.html" class="sidebar-link">Indexlist 分类列表</a>
     </li>
   
     
@@ -579,7 +579,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/dialog.html" class="sidebar-link new">Dialog 弹窗</a>
+      <a href="/docs/feui/guide/component/dialog.html" class="sidebar-link current new">Dialog 弹窗</a>
     </li>
   
     
@@ -606,20 +606,60 @@
 
 
 
-<div  id='content' class="content guide with-sidebar indexlist-guide">
+<div  id='content' class="content guide with-sidebar dialog-guide">
   <div class='content_box'>
     
-      <h1>Indexlist 分类列表</h1>
+      <h1>Dialog 弹窗</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/indexlist">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Indexlist &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Indexlist.name]: Indexlist</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><blockquote>
-<p><code>link</code> 如果有该属性，右侧将会出现指引点击的右箭头，当做路由跳转。</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-list</span> <span class="attr">v-model</span>=<span class="string">"oData"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-list</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data() &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      oData: [&#123;</div><div class="line">        name: <span class="string">'#'</span>,</div><div class="line">        list: [&#123;</div><div class="line">            text: <span class="string">'12547896'</span></div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'451384'</span></div><div class="line">        &#125;]</div><div class="line">      &#125;,&#123;</div><div class="line">        name: <span class="string">'F'</span>,</div><div class="line">        list: [&#123;</div><div class="line">            text: <span class="string">'海贼王'</span>,</div><div class="line">            link:<span class="string">'/cell'</span></div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'汇通'</span>,</div><div class="line">        &#125;,&#123;</div><div class="line">            text:<span class="string">'hotmail'</span></div><div class="line">        &#125;]</div><div class="line">      &#125;,&#123;</div><div class="line">        name: <span class="string">'A'</span>,</div><div class="line">        list: [&#123;</div><div class="line">            text: <span class="string">'爱奇艺'</span>,</div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'阿里云'</span>,</div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'阿里巴巴'</span>,</div><div class="line">        &#125;,&#123;</div><div class="line">            text: <span class="string">'安居客'</span>,</div><div class="line">        &#125;,]</div><div class="line">      &#125;]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+      <p><a href="https://feui.gitee.io/#/dialog">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><p><strong>main.js</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</div><div class="line"><span class="keyword">import</span> &#123; Dialog &#125; <span class="keyword">from</span> <span class="string">"feui"</span>;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.Dialog = Dialog;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="消息提示"><a href="#消息提示" class="headerlink" title="消息提示"></a>消息提示</h4><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Dialog.alert(&#123;</div><div class="line">  title: title,</div><div class="line">  skin: skin,</div><div class="line">  message: <span class="string">"弹窗内容"</span>,</div><div class="line">  confirmButtonText: <span class="string">"确实"</span></div><div class="line">&#125;).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// on close</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="消息确认"><a href="#消息确认" class="headerlink" title="消息确认"></a>消息确认</h4><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Dialog.confirm(&#123;</div><div class="line">  title: title,</div><div class="line">  skin: skin,</div><div class="line">  message: <span class="string">"弹窗内容"</span></div><div class="line">&#125;)</div><div class="line">.then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// on confirm</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"confirm"</span>);</div><div class="line">&#125;)</div><div class="line">.catch(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// on cancel</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"cancel"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="提供方法"><a href="#提供方法" class="headerlink" title="提供方法"></a>提供方法</h3><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>参数</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dialog</td>
+<td>展示弹窗</td>
+<td><code>options</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Dialog.alert</td>
+<td>展示消息提示弹窗</td>
+<td><code>options</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Dialog.confirm</td>
+<td>展示消息确认弹窗</td>
+<td><code>options</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Dialog.close</td>
+<td>关闭弹窗</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -631,18 +671,53 @@
 </thead>
 <tbody>
 <tr>
-<td>value</td>
-<td>列表显示值，使用v-model绑定</td>
-<td><code>Object</code></td>
+<td>title</td>
+<td>标题</td>
+<td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>isSort</td>
-<td>是否需要根据name排序</td>
+<td>message</td>
+<td>内容</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>skin</td>
+<td>主题</td>
+<td><code>String</code></td>
+<td><code>ios</code></td>
+<td><code>ios</code>,<code>android</code></td>
+</tr>
+<tr>
+<td>showConfirmButton</td>
+<td>是否展示确认按钮</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>showCancelButton</td>
+<td>是否展示取消按钮</td>
 <td><code>Boolean</code></td>
 <td><code>false</code></td>
-<td><code>false,true</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>confirmButtonText</td>
+<td>确认按钮的文字</td>
+<td><code>String</code></td>
+<td><code>确定</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>cancelButtonText</td>
+<td>取消按钮的文字</td>
+<td><code>String</code></td>
+<td><code>取消</code></td>
+<td>-</td>
 </tr>
 <tr>
 <td>-</td>
@@ -658,16 +733,14 @@
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/flexbox.html">Flexbox 弹性布局</a></span>
+          <span>← <a href="/docs/feui/guide/component/datetime.html">Datetime 日期</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/inlinecalendar.html">inlineCalendar 日历组件</a> →</span>
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/indexlist.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/dialog.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
