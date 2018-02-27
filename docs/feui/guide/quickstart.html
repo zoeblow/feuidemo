@@ -579,7 +579,21 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/dialog.html" class="sidebar-link new">Dialog 弹窗</a>
+      <a href="/docs/feui/guide/component/dialog.html" class="sidebar-link">Dialog 弹窗</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/loading.html" class="sidebar-link new">Loading 加载中</a>
     </li>
   
     
@@ -614,14 +628,14 @@
     <div id='pContent'>
       <h2 id="Feui"><a href="#Feui" class="headerlink" title="Feui"></a>Feui</h2><p><strong>Feui</strong> 是爱信诺移动组基于<code>WeUI</code>、<code>nuim</code>和<code>Vue(2.x)</code>开发的移动端 UI 组件库，希望借此提高组件价值，减轻工作量，更好的享受生活，享受工作。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><div class="line">npm i feui --save-dev</div></pre></td></tr></table></figure>
-<h3 id="引入组件"><a href="#引入组件" class="headerlink" title="引入组件"></a>引入组件</h3><h4 id="No-1-使用-babel-plugin-import-推荐"><a href="#No-1-使用-babel-plugin-import-推荐" class="headerlink" title="No.1 : 使用  babel-plugin-import (推荐)"></a>No.1 : 使用  <a href="https://github.com/ant-design/babel-plugin-import" target="_blank" rel="external">babel-plugin-import</a> (推荐)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 安装 babel-plugin-import 插件</span></div><div class="line">npm i babel-plugin-import --save-dev</div></pre></td></tr></table></figure>
+<h3 id="引入组件"><a href="#引入组件" class="headerlink" title="引入组件"></a>引入组件</h3><h4 id="No-1-使用-babel-plugin-import-推荐"><a href="#No-1-使用-babel-plugin-import-推荐" class="headerlink" title="No.1 : 使用  babel-plugin-import (推荐)"></a>No.1 : 使用  <a href="https://github.com/ant-design/babel-plugin-import" target="_blank" rel="noopener">babel-plugin-import</a> (推荐)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 安装 babel-plugin-import 插件</span></div><div class="line">npm i babel-plugin-import --save-dev</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 在 .babelrc 或 babel-loader 中添加插件配置</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"plugins"</span>: [</div><div class="line">    [<span class="string">"import"</span>, &#123; <span class="string">"libraryName"</span>: <span class="string">"feui"</span>, <span class="string">"style"</span>: <span class="literal">true</span> &#125;]</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>接着你可以在代码中直接引入 feui 组件，插件会自动将代码转化为 No.2 的按需引入形式。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Button &#125; <span class="keyword">from</span> <span class="string">"feui"</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  components: &#123;</div><div class="line">    [Button.name]: Button</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <h4 id="No-2-按需引入组件"><a href="#No-2-按需引入组件" class="headerlink" title="No.2 : 按需引入组件"></a>No.2 : 按需引入组件</h4><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Button &#125; <span class="keyword">from</span> <span class="string">"feui/lib/button"</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">"feui/lib/feui-css/base.css"</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">"feui/lib/feui-css/button.css"</span>;</div></pre></td></tr></table></figure>
 <h4 id="No-3-导入所有组件"><a href="#No-3-导入所有组件" class="headerlink" title="No.3 : 导入所有组件"></a>No.3 : 导入所有组件</h4><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</div><div class="line"><span class="keyword">import</span> feui <span class="keyword">from</span> <span class="string">"feui"</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">"feui/lib/feui-css/index.css"</span>;</div><div class="line"></div><div class="line">Vue.use(feui);</div></pre></td></tr></table></figure>
 <h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 引入样式 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://unpkg.com/feui/lib/feui-css/index.css"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 引入组件 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/feui/lib/feui.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="vue-cli-脚手架-feui-cli"><a href="#vue-cli-脚手架-feui-cli" class="headerlink" title="vue-cli 脚手架 feui-cli"></a>vue-cli 脚手架 <a href="https://github.com/zoeblow/feui-cli" target="_blank" rel="external">feui-cli</a></h3><p>可以使用<code>vue-cli</code>的定义脚手架来初始化<code>feui</code>：</p>
+<h3 id="vue-cli-脚手架-feui-cli"><a href="#vue-cli-脚手架-feui-cli" class="headerlink" title="vue-cli 脚手架 feui-cli"></a>vue-cli 脚手架 <a href="https://github.com/zoeblow/feui-cli" target="_blank" rel="noopener">feui-cli</a></h3><p>可以使用<code>vue-cli</code>的定义脚手架来初始化<code>feui</code>：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">vue init zoeblow/feui-cli projectName</div></pre></td></tr></table></figure>
 
     </div>
