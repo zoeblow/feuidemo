@@ -1,0 +1,833 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Popup 弹出 — Feui</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
+    <!--[if lte IE 9]>
+      <meta http-equiv="refresh" content="0;url=https://ifuyuan.wang/browser/">
+    <![endif]-->
+    <title>Feui</title>
+    <link rel="stylesheet" href="/docs/./css/style.css">
+    <script>window.PAGE_TYPE = "guide"</script>
+</head>
+
+<a href="https://github.com/zoeblow/feui" target="_blank" class="github-corner" aria-label="View source on Github"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#41b883; color:#fff; position: fixed; top: 0; border: 0; right: 0;z-index: 99;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+<div id='progress'></div>
+<body class="docs">
+    <div id="header">
+  <a id="logo" href="/docs/">
+    <img src="/docs/images/logo.png">
+    <span>Feui</span>
+  </a>
+  <button id='mobile'>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>  
+  <ul id="nav">
+    <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
+<li><a href="https://feui.gitee.io" >示例</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
+  </ul>
+</div>
+    
+      <div id="main" class="fix-sidebar">
+        <div class='main-content'>
+          
+            <button id='mobile2'>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+</button>  
+<div id='mask'></div>
+
+  <div class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      <li><a href="/docs/feui/guide/" class="nav-link current">教程</a></li>
+<li><a href="https://feui.gitee.io" >示例</a></li>
+<li><a href="/docs/feui/guide/team.html" class="nav-link team">Team</a></li>
+    </ul>
+    <div class="list">
+      <ul class="menu-root">
+  
+    
+    
+      
+        <li><a class='title-18'>开发指南</a></li>
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/index.html" class="sidebar-link">Feui介绍</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/quickstart.html" class="sidebar-link">快速上手</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/readme.html" class="sidebar-link">开发指北</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/changelog.html" class="sidebar-link">更新日志</a>
+    </li>
+  
+    
+    
+      
+      
+        <li><a class='title-18'>组件系统</a></li>
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/component.html" class="sidebar-link">组件系统文档规则</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/forms.html" class="sidebar-link">文档格式</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/demo.html" class="sidebar-link">栗子 Demo</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+        <li><a class='title-16'>基础组件</a></li>
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/badge.html" class="sidebar-link">Badge 徽章</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/button.html" class="sidebar-link">Button 按钮</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/count.html" class="sidebar-link">Count 累加器</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/header.html" class="sidebar-link">Header 头部</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/icon.html" class="sidebar-link">Icon 图标</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/qrcode.html" class="sidebar-link">QRcode 二维码</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/range.html" class="sidebar-link">Range 滑块</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/rater.html" class="sidebar-link">Rater 评价</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/search.html" class="sidebar-link">Search 搜索框</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/steps.html" class="sidebar-link">Steps 步骤条</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/tab.html" class="sidebar-link">Tab 标签栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/tabber.html" class="sidebar-link">Tabbar 底部标签</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+        <li><a class='title-16'>表单组件</a></li>
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/address.html" class="sidebar-link">Address 地址栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/cell.html" class="sidebar-link">Cell 单元格</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/checkicon.html" class="sidebar-link">Checkicon 单选按钮</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/checklist.html" class="sidebar-link">Checklist 按钮组</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/countup.html" class="sidebar-link">Countup 数字滚动</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/flexbox.html" class="sidebar-link">Flexbox 弹性布局</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/indexlist.html" class="sidebar-link">Indexlist 分类列表</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/inlinecalendar.html" class="sidebar-link">inlineCalendar 日历组件</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/input.html" class="sidebar-link">input 输入框</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/lazyload.html" class="sidebar-link">Lazyload 懒加载</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/noticebar.html" class="sidebar-link">NoticeBar 通知栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/pullrefresh.html" class="sidebar-link">Pullrefresh 刷新加载</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/radio.html" class="sidebar-link">Radio 单选按钮</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/switch.html" class="sidebar-link">Switch 开关</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/textarea.html" class="sidebar-link">Textarea 文本域</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+        <li><a class='title-16'>反馈组件</a></li>
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/actionsheet.html" class="sidebar-link">Actionsheet 地址栏</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/datetime.html" class="sidebar-link">Datetime 日期</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/dialog.html" class="sidebar-link">Dialog 弹窗</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/loading.html" class="sidebar-link">Loading 加载中</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/picker.html" class="sidebar-link new">Picker 选择</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/popup.html" class="sidebar-link current new">Popup 弹出</a>
+    </li>
+  
+    
+    
+      
+      
+      
+        <li><a class='title-18'>Team</a></li>
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/team.html" class="sidebar-link">Team</a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div  id='content' class="content guide with-sidebar popup-guide">
+  <div class='content_box'>
+    
+      <h1>Popup 弹出</h1>
+    
+    <div id='pContent'>
+      <p><a href="https://feui.gitee.io/#/popup">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Popup &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Popup.name]: Popup,</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">methods: &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="默认Popup"><a href="#默认Popup" class="headerlink" title="默认Popup"></a>默认Popup</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"Default popup"</span> <span class="attr">v-model</span>=<span class="string">"show"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-popup</span> <span class="attr">v-model</span>=<span class="string">"show"</span> @<span class="attr">on-hide</span>=<span class="string">"log('hide')"</span> @<span class="attr">on-show</span>=<span class="string">"log('show')"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"popup0"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"另一个 switch"</span> <span class="attr">v-model</span>=<span class="string">"show"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"显示 Toast"</span> <span class="attr">v-model</span>=<span class="string">"showToast"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-popup</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="全屏弹出"><a href="#全屏弹出" class="headerlink" title="全屏弹出"></a>全屏弹出</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"全屏弹出"</span> <span class="attr">v-model</span>=<span class="string">"show1"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-popup</span> <span class="attr">v-model</span>=<span class="string">"show1"</span> <span class="attr">height</span>=<span class="string">"100%"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"popup1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"另一个 switch"</span> <span class="attr">v-model</span>=<span class="string">"show1"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-popup</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="内部滚动"><a href="#内部滚动" class="headerlink" title="内部滚动"></a>内部滚动</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"with a Scroller"</span> <span class="attr">v-model</span>=<span class="string">"show2"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-popup</span> <span class="attr">v-model</span>=<span class="string">"show2"</span> <span class="attr">height</span>=<span class="string">"250px"</span> <span class="attr">style</span>=<span class="string">'overflow:hidden;'</span>  </span></div><div class="line"><span class="tag">  @<span class="attr">on-first-show</span>=<span class="string">"resetScroller"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-scroll</span> <span class="attr">class</span>=<span class="string">"page-content"</span></span></div><div class="line"><span class="tag">    <span class="attr">:on-refresh</span>=<span class="string">"onRefresh"</span></span></div><div class="line"><span class="tag">    <span class="attr">:on-infinite</span>=<span class="string">"onInfinite"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(item, index) in items"</span> <span class="attr">:key</span>=<span class="string">"index"</span> @<span class="attr">click.native</span>=<span class="string">"onItemClick(index)"</span> </span></div><div class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">'item'</span> <span class="attr">:class</span>=<span class="string">"&#123;'item-stable': index % 2 == 0&#125;"</span>&gt;</span></div><div class="line">      &#123;&#123; item &#125;&#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"infiniteCount &gt;= 2"</span> <span class="attr">slot</span>=<span class="string">"infinite"</span> <span class="attr">class</span>=<span class="string">"text-center"</span>&gt;</span>没有更多数据<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-scroll</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-popup</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="禁用点击mask关闭"><a href="#禁用点击mask关闭" class="headerlink" title="禁用点击mask关闭"></a>禁用点击mask关闭</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"禁用点击mask关闭"</span> <span class="attr">v-model</span>=<span class="string">"show5"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-popup</span> <span class="attr">v-model</span>=<span class="string">"show5"</span> <span class="attr">:hide-on-blur</span>=<span class="string">false</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"popup2"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"禁用点击mask关闭"</span> <span class="attr">v-model</span>=<span class="string">"show5"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">    Mask不可点</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-popup</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="背景透明"><a href="#背景透明" class="headerlink" title="背景透明"></a>背景透明</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"背景透明"</span> <span class="attr">v-model</span>=<span class="string">"show7"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-popup</span> <span class="attr">v-model</span>=<span class="string">"show7"</span> <span class="attr">height</span>=<span class="string">"270px"</span> <span class="attr">is-transparent</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width: 95%;background-color:#fff;height:250px;</span></span></div><div class="line"><span class="tag"><span class="string">    margin:0 auto;border-radius:5px;padding-top:10px;"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"产品名称"</span> <span class="attr">value</span>=<span class="string">"比特币1个"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"金额"</span> <span class="attr">value</span>=<span class="string">"￥10.24"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"padding:20px 15px;"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span>&gt;</span>支付<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"show7 = false"</span>&gt;</span> 取消<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-popup</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="背景透明-1"><a href="#背景透明-1" class="headerlink" title="背景透明"></a>背景透明</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"左边(100% width)"</span> <span class="attr">v-model</span>=<span class="string">"show8"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-popup</span> <span class="attr">v-model</span>=<span class="string">"show8"</span> <span class="attr">position</span>=<span class="string">"left"</span> <span class="attr">width</span>=<span class="string">"100%"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"position-horizontal-demo"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"nuim-close"</span> @<span class="attr">click</span>=<span class="string">"show8 = false"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-popup</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>是否关闭，使用v-model绑定</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>width</td>
+<td>设置<code>100%</code>宽度必须使用该属性。在<code>position</code>为<code>left</code>或者<code>right</code>时有效。</td>
+<td><code>String</code></td>
+<td><code>auto</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>height</td>
+<td>高度，设置<code>100%</code>为整屏高度。当<code>position</code>为<code>top</code>或者<code>bottom</code>时有效。</td>
+<td><code>String</code></td>
+<td><code>auto</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>show-mask</td>
+<td>是否显示遮罩</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>hide-on-blur</td>
+<td>指定联动模式下的列数，当不指定时表示非联动</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>is-transparent</td>
+<td>是否为透明背景</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>position</td>
+<td>弹出的位置</td>
+<td><code>String</code></td>
+<td><code>bottom</code></td>
+<td><code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code></td>
+</tr>
+<tr>
+<td>popup-style</td>
+<td>弹窗样式，可以用于强制指定 z-index</td>
+<td><code>Object</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>hide-on-deactivated</td>
+<td>是否在 deactived 事件触发时自动关闭，避免在路由切换时依然显示弹窗</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th>Slot名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>弹窗主体内容</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
+<thead>
+<tr>
+<th>事件名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>on-hide</td>
+<td>-</td>
+<td>关闭时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-show</td>
+<td>-</td>
+<td>显示时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>on-first-show</td>
+<td>-</td>
+<td>第一次显示时触发，可以在该事件回调里初始化数据或者界面</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/docs/feui/guide/component/picker.html">Picker 选择</a></span>
+        
+        
+      </div>
+    
+    <div class="footer">
+      文档出现错误或者想参与贡献?
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/popup.md" target="_blank">
+        在Github编辑此页面!
+      </a>
+    </div>
+  </div>
+</div>
+
+          
+        </div>
+      </div>
+      <script src="/docs/./js/smooth-scroll.min.js"></script>
+    
+    <script src="/docs/./js/css.escape.js"></script>
+    <script src="/docs/./js/common.js"></script>
+    <script src="/docs/./js/index.js"></script>
+</body>
+</html>
