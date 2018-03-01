@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Datetime 日期 — Feui</title>
+    <title>PopupPicker 弹出选择 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -565,7 +565,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/datetime.html" class="sidebar-link current">Datetime 日期</a>
+      <a href="/docs/feui/guide/component/datetime.html" class="sidebar-link">Datetime 日期</a>
     </li>
   
     
@@ -635,7 +635,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/popuppicker.html" class="sidebar-link new">PopupPicker 弹出选择</a>
+      <a href="/docs/feui/guide/component/popuppicker.html" class="sidebar-link current new">PopupPicker 弹出选择</a>
     </li>
   
     
@@ -662,18 +662,22 @@
 
 
 
-<div  id='content' class="content guide with-sidebar datetime-guide">
+<div  id='content' class="content guide with-sidebar popuppicker-guide">
   <div class='content_box'>
     
-      <h1>Datetime 日期</h1>
+      <h1>PopupPicker 弹出选择</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/datetime">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Datetime &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Datetime.name]: Datetime</div><div class="line">&#125;,</div><div class="line">methods: &#123;</div><div class="line">  change (value) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'change'</span>, value)</div><div class="line">  &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"默认格式: YYYY-MM-DD"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"value1"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="定义小时分钟列表"><a href="#定义小时分钟列表" class="headerlink" title="定义小时分钟列表"></a>定义小时分钟列表</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"定义小时分钟列表"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"hourListValue"</span> <span class="attr">format</span>=<span class="string">"YYYY-MM-DD HH:mm"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:hour-list</span>=<span class="string">"['09', '10', '11', '12', '13', '14', '15', '16']"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:minute-list</span>=<span class="string">"['00', '15', '30', '45']"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="只读模式"><a href="#只读模式" class="headerlink" title="只读模式"></a>只读模式</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"Readonly"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"valueReadonly"</span> <span class="attr">:readonly</span>=<span class="string">"readonly"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="设置开始时间和结束日"><a href="#设置开始时间和结束日" class="headerlink" title="设置开始时间和结束日"></a>设置开始时间和结束日</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置开始时间和结束日期 2015-11-11 ~ 2018-11-11"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"limitHourValue"</span> <span class="attr">:start-date</span>=<span class="string">"startDate"</span> <span class="attr">:end-date</span>=<span class="string">"endDate"</span> </span></div><div class="line"><span class="tag">    <span class="attr">format</span>=<span class="string">"YYYY-MM-DD HH:mm"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"开始时间"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+      <p><a href="https://feui.gitee.io/#/popuppicker">Live Demo&gt;&gt;</a></p>
+<blockquote>
+<p><code>fe-cell</code> 请在<code>fe-group</code>中使用。</p>
+</blockquote>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; PopupPicker &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [PopupPicker.name]: PopupPicker,</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">methods: &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="单列PopupPicker"><a href="#单列PopupPicker" class="headerlink" title="单列PopupPicker"></a>单列PopupPicker</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"单列"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">popup-picker</span> <span class="attr">:title</span>=<span class="string">"title1"</span> <span class="attr">:data</span>=<span class="string">"list1"</span> <span class="attr">v-model</span>=<span class="string">"value1"</span> @<span class="attr">on-show</span>=<span class="string">"onShow"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-hide</span>=<span class="string">"onHide"</span> @<span class="attr">on-change</span>=<span class="string">"onChange"</span> <span class="attr">placeholder</span>=<span class="string">"请选择"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">popup-picker</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">popup-picker</span> <span class="attr">:popup-title</span>=<span class="string">"请选择"</span> <span class="attr">:title</span>=<span class="string">"title1"</span> <span class="attr">:data</span>=<span class="string">"list1"</span> <span class="attr">v-model</span>=<span class="string">"value1_1"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-show</span>=<span class="string">"onShow"</span> @<span class="attr">on-hide</span>=<span class="string">"onHide"</span> @<span class="attr">on-change</span>=<span class="string">"onChange"</span> <span class="attr">placeholder</span>=<span class="string">"请选择"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot</span>=<span class="string">"title"</span> <span class="attr">slot-scope</span>=<span class="string">"props"</span>&gt;</span><span class="comment">&lt;!-- use scope="props" when vue &lt; 2.5.0 --&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">:class</span>=<span class="string">"props.labelClass"</span> <span class="attr">:style</span>=<span class="string">"props.labelStyle"</span> <span class="attr">style</span>=<span class="string">"height:24px;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"cell-icon iconfont feui-icon"</span> </span></div><div class="line"><span class="tag">          <span class="attr">style</span>=<span class="string">"font-size:20px;vertical-align:middle;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"vertical-align:middle;"</span>&gt;</span>手机<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">popup-picker</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="双列PopupPicker"><a href="#双列PopupPicker" class="headerlink" title="双列PopupPicker"></a>双列PopupPicker</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"> <span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"两列"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">popup-picker</span> <span class="attr">:title</span>=<span class="string">"title2"</span> <span class="attr">:data</span>=<span class="string">"list2"</span> <span class="attr">v-model</span>=<span class="string">"value2"</span>&gt;</span><span class="tag">&lt;/<span class="name">popup-picker</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="多列"><a href="#多列" class="headerlink" title="多列"></a>多列</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"chained columns"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">popup-picker</span> <span class="attr">:title</span>=<span class="string">"title3"</span> <span class="attr">:data</span>=<span class="string">"list3"</span> <span class="attr">:columns</span>=<span class="string">"3"</span> </span></div><div class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"value3"</span> <span class="attr">ref</span>=<span class="string">"picker3"</span>&gt;</span><span class="tag">&lt;/<span class="name">popup-picker</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"获取值对应的文字"</span> <span class="attr">:value</span>=<span class="string">"$refs.picker3&amp;&amp;</span></span></div><div class="line"><span class="tag"><span class="string">  $refs.picker3.getNameValues()"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">popup-picker</span> <span class="attr">:title</span>=<span class="string">"title4"</span> <span class="attr">:data</span>=<span class="string">"list3"</span> <span class="attr">:columns</span>=<span class="string">"3"</span> </span></div><div class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"value4"</span> <span class="attr">show-name</span>&gt;</span><span class="tag">&lt;/<span class="name">popup-picker</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="隐藏时不影响其他popup-picker的mask"><a href="#隐藏时不影响其他popup-picker的mask" class="headerlink" title="隐藏时不影响其他popup-picker的mask"></a>隐藏时不影响其他popup-picker的mask</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"隐藏时不影响其他popup-picker的mask"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-switch</span> <span class="attr">title</span>=<span class="string">"隐藏popup"</span> <span class="attr">v-model</span>=<span class="string">"switch6"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-switch</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">popup-picker</span> <span class="attr">v-if</span>=<span class="string">"!switch6"</span> <span class="attr">title</span>=<span class="string">"显示值"</span> <span class="attr">:data</span>=<span class="string">"['你猜猜我是谁啊'.split('')]"</span></span></div><div class="line"><span class="tag">   <span class="attr">v-model</span>=<span class="string">"value6"</span>&gt;</span><span class="tag">&lt;/<span class="name">popup-picker</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="显示格式化"><a href="#显示格式化" class="headerlink" title="显示格式化"></a>显示格式化</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"显示格式化"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">popup-picker</span> <span class="attr">title</span>=<span class="string">"时间"</span> <span class="attr">:inline-desc</span>=<span class="string">"`当前值[$&#123;formatDemoValue&#125;]`"</span> </span></div><div class="line"><span class="tag">    <span class="attr">v-model</span>=<span class="string">"formatDemoValue"</span> <span class="attr">:data</span>=<span class="string">"[['01','02','03'],['11','12','13']]"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:display-format</span>=<span class="string">"format"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">popup-picker</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -686,13 +690,6 @@
 </thead>
 <tbody>
 <tr>
-<td>value</td>
-<td>表单值，<code>v-model</code>绑定</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
 <td>title</td>
 <td>标题</td>
 <td><code>String</code></td>
@@ -700,183 +697,78 @@
 <td>-</td>
 </tr>
 <tr>
-<td>format</td>
-<td>时间格式</td>
-<td><code>String</code></td>
-<td>YYYY-MM-DD</td>
-<td>YYYY-MM-DD HH:mm:ss等</td>
+<td>value</td>
+<td>表单值，使用v-model绑定</td>
+<td><code>Array</code></td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
-<td>inline-desc</td>
-<td>描述字符</td>
+<td>confirm-text</td>
+<td>弹窗的确定文字</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>cancel-text</td>
+<td>弹窗的取消文字</td>
 <td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
 <td>placeholder</td>
-<td>提示文字，当value为空时显示</td>
+<td>提示文字</td>
 <td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>min-year</td>
-<td>可选择的最小年份</td>
-<td><code>Number</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>max-year</td>
-<td>可选择的最大年份</td>
-<td><code>Number</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>min-hour</td>
-<td>限定小时最小值</td>
-<td><code>Number</code></td>
-<td><code>0</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>max-hour</td>
-<td>限定小时最大值</td>
-<td><code>Number</code></td>
-<td><code>23</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>confirm-text</td>
-<td>确认按钮文字</td>
-<td><code>String</code></td>
-<td><code>ok(确认)</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>cancel-text</td>
-<td>取消按钮文字</td>
-<td><code>String</code></td>
-<td><code>cancel(取消)</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>clear-text</td>
-<td>显示在中间的自定义按钮的文字</td>
+<td>inline-desc</td>
+<td>Cell的描述文字</td>
 <td><code>String</code></td>
 <td>-</td>
 <td>-</td>
-</tr>
-<tr>
-<td>year-row</td>
-<td>年份的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>month-row</td>
-<td>月份的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>day-row</td>
-<td>日期的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>hour-row</td>
-<td>小时的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>minute-row</td>
-<td>分钟的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>start-date</td>
-<td>限定最小日期，格式必须为 YYYY-MM-DD</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>end-date</td>
-<td>限定最大日期，格式必须为 YYYY-MM-DD</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>required</td>
-<td>是否必填</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>false</code>,<code>true</code></td>
-</tr>
-<tr>
-<td>display-format</td>
-<td>自定义显示值</td>
-<td><code>Function</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>readonly</td>
-<td>只读模式，显示类似于 cell</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>false</code>,<code>true</code></td>
 </tr>
 <tr>
 <td>show</td>
-<td>控制显示，要求 vue^2.3</td>
+<td>显示 (支持.sync修饰 next)</td>
 <td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>false</code>,<code>true</code></td>
+<td><code>true</code></td>
+<td><code>true</code>,<code>false</code></td>
 </tr>
 <tr>
-<td>hour-list</td>
-<td>定义小时列表</td>
-<td><code>Array</code></td>
-<td>-</td>
-<td>-</td>
+<td>show-name</td>
+<td>是否显示文字值而不是<code>key</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>true</code>,<code>false</code></td>
 </tr>
 <tr>
-<td>minute-list</td>
-<td>定义分钟列表</td>
-<td><code>Array</code></td>
-<td>-</td>
-<td>-</td>
+<td>value-text-align</td>
+<td><code>value</code>对齐方式(text-align)</td>
+<td><code>String</code></td>
+<td><code>right</code></td>
+<td><code>left</code>,<code>right</code></td>
 </tr>
 <tr>
-<td>default-selected-value</td>
-<td>设置默认选中日期，当前 value 为空时有效</td>
+<td>popup-title</td>
+<td>弹窗标题</td>
 <td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>compute-days-function</td>
-<td>动态设置日期列表，参数为 ({year, month, min, max}, generateRange)</td>
-<td><code>Function</code></td>
+<td>popup-style</td>
+<td>弹窗样式，可以用于强制指定<code>z-index</code></td>
+<td><code>Object</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>compute-hours-function</td>
-<td>动态设置小时列表，参数为 (value, isToday, generateRange)</td>
+<td>display-format</td>
+<td>自定义在<code>cell</code>上的显示格式，参数为当前<code>value</code>，<br>使用该属性时，<code>show-name</code>属性将失效</td>
 <td><code>Function</code></td>
 <td>-</td>
 <td>-</td>
@@ -900,14 +792,9 @@
 </thead>
 <tbody>
 <tr>
-<td>default</td>
-<td>触发元素内容</td>
-<td>-</td>
-</tr>
-<tr>
 <td>title</td>
-<td>title slot</td>
-<td>-</td>
+<td>标题插槽</td>
+<td>使用<code>scope.labelClass</code>和<code>scope.labelStyle</code>继<br>承原有样式(实现样式受控于<code>group</code> <code>label</code>设置)</td>
 </tr>
 <tr>
 <td>-</td>
@@ -929,37 +816,25 @@
 <tr>
 <td>on-change</td>
 <td><code>value</code></td>
-<td>表单值变表单值变化时触发, 参数<code>(newVal)</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>on-clear</td>
-<td>-</td>
-<td>点击显示在中间的自定义按钮时触发</td>
+<td>值变化时触发</td>
 <td>-</td>
 </tr>
 <tr>
 <td>on-show</td>
 <td>-</td>
-<td>弹窗显示时触发</td>
+<td>弹窗出现时触发</td>
 <td>-</td>
 </tr>
 <tr>
 <td>on-hide</td>
-<td><code>type</code></td>
+<td><code>closeType</code></td>
 <td>弹窗关闭时触发</td>
-<td><code>type</code> 是<code>[cancel, confirm]</code>其中之一</td>
+<td><code>true</code>表示<code>confirm(选择确认)</code>, <code>false</code>表示其他情况的关闭</td>
 </tr>
 <tr>
-<td>on-confirm</td>
-<td>-</td>
-<td>点击确定按钮时触发，等同于事件<code>on-hide(confirm)</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>on-cancel</td>
-<td>-</td>
-<td>点击取消按钮或者遮罩时触发，等同于事件<code>on-hide(cancel)</code></td>
+<td>on-shadow-change</td>
+<td><code>Array ids, Array names</code></td>
+<td>picker 值变化时触发，即滑动 picker 时触发</td>
 <td>-</td>
 </tr>
 <tr>
@@ -975,16 +850,14 @@
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/actionsheet.html">Actionsheet 地址栏</a></span>
+          <span>← <a href="/docs/feui/guide/component/popup.html">Popup 弹出</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/dialog.html">Dialog 弹窗</a> →</span>
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/datetime.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/popuppicker.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
