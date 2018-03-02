@@ -93,9 +93,9 @@
       width: 100%;
     }
 
-    a {
+    .main-404 a {
       /* text-decoration: #C85F5F; */
-      color: #ce7171;
+      /* color: #ce7171; */
     }
 
     body {
@@ -103,8 +103,11 @@
       font-size: 1.0625rem;
       background: #fff;
     }
+    .main-404{
+      min-height: 300px;
+    }
 
-    .Error {
+    .main-404 .Error {
       text-align: center;
       width: 500px;
       height: 300px;
@@ -115,19 +118,28 @@
       margin-left: -250px;
     }
 
-    .error-type {
+    .main-404  .error-type {
       font-size: 5em;
-      color: #C85F5F;
+      color: #41b883;
     }
 
-    .error-issue {
+    .main-404 .error-issue {
       font-size: 1.2em;
+    }
+
+    @media (max-width: 767px) {
+      .main-404 .Error{
+        width: 100%;
+        position: static;
+        margin: auto;
+        padding-top: 50px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="main">
+  <div class="main-404">
     <section class="Error">
       <div class="error-type">404</div>
       <div class="error-issue">
