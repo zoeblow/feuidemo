@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Pullrefresh 刷新加载 — Feui</title>
+    <title>Scroll 滑动加载 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -493,7 +493,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/pullrefresh.html" class="sidebar-link current">Pullrefresh 刷新加载</a>
+      <a href="/docs/feui/guide/component/pullrefresh.html" class="sidebar-link">Pullrefresh 刷新加载</a>
     </li>
   
     
@@ -649,7 +649,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/scroll.html" class="sidebar-link new">Scroll 滑动加载</a>
+      <a href="/docs/feui/guide/component/scroll.html" class="sidebar-link current new">Scroll 滑动加载</a>
     </li>
   
     
@@ -676,31 +676,69 @@
 
 
 
-<div  id='content' class="content guide with-sidebar pullrefresh-guide">
+<div  id='content' class="content guide with-sidebar scroll-guide">
   <div class='content_box'>
     
-      <h1>Pullrefresh 刷新加载</h1>
+      <h1>Scroll 滑动加载</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/pullrefresh">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><blockquote>
-<p>该组件目前已经升级为<code>Scroll</code>,请移步<a href="https://feui.gitee.io/docs/feui/guide/component/scroll.html">Scroll</a></p>
-</blockquote>
+      <p><a href="https://feui.gitee.io/#/scroll">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Scroll &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Scroll.name]: Scroll,</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    items: [],</div><div class="line">    infiniteCount: <span class="number">0</span>,</div><div class="line">    hasHeader: <span class="literal">true</span></div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">methods: &#123;</div><div class="line">  onRefresh(done) &#123;</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> start = <span class="keyword">this</span>.top - <span class="number">1</span>;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &gt; start - <span class="number">10</span>; i--) &#123;</div><div class="line">        <span class="keyword">this</span>.items.splice(<span class="number">0</span>, <span class="number">0</span>, i + <span class="string">" With You, Just Do CSS."</span>);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">this</span>.top = <span class="keyword">this</span>.top - <span class="number">10</span>;</div><div class="line">      done();</div><div class="line">    &#125;, <span class="number">1500</span>);</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  onInfinite(done) &#123;</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.infiniteCount &lt; <span class="number">2</span>) &#123;</div><div class="line">        <span class="keyword">let</span> start = <span class="keyword">this</span>.bottom + <span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt; start + <span class="number">10</span>; i++) &#123;</div><div class="line">          <span class="keyword">this</span>.items.push(i + <span class="string">" With You, Just Do JS."</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.bottom = <span class="keyword">this</span>.bottom + <span class="number">10</span>;</div><div class="line"></div><div class="line">        <span class="keyword">this</span>.infiniteCount++;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      done();</div><div class="line">    &#125;, <span class="number">1500</span>);</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  onItemClick(index) &#123;</div><div class="line">    <span class="built_in">console</span>.log(index);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="单列Scroll"><a href="#单列Scroll" class="headerlink" title="单列Scroll"></a>单列Scroll</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-scroll</span> <span class="attr">class</span>=<span class="string">"page-content"</span></span></div><div class="line"><span class="tag">  <span class="attr">:on-refresh</span>=<span class="string">"onRefresh"</span></span></div><div class="line"><span class="tag">  <span class="attr">:on-infinite</span>=<span class="string">"onInfinite"</span></span></div><div class="line"><span class="tag">  <span class="attr">:hasHeader</span>=<span class="string">"hasHeader"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(item, index) in items"</span> <span class="attr">:key</span>=<span class="string">"index"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">click.native</span>=<span class="string">"onItemClick(index)"</span> <span class="attr">class</span>=<span class="string">'item'</span> </span></div><div class="line"><span class="tag">    <span class="attr">:class</span>=<span class="string">"&#123;'item-stable': index % 2 == 0&#125;"</span>&gt;</span></div><div class="line">    &#123;&#123; item &#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"infiniteCount &gt;= 2"</span> <span class="attr">slot</span>=<span class="string">"infinite"</span> <span class="attr">class</span>=<span class="string">"text-center"</span>&gt;</span>没有更多数据<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-scroll</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasHeader</td>
+<td>是否有标题</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>onRefresh</td>
+<td>下拉刷新回调</td>
+<td><code>Function</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onInfinite</td>
+<td>无限加载回调</td>
+<td><code>Function</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
     </div>
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/noticebar.html">NoticeBar 通知栏</a></span>
+          <span>← <a href="/docs/feui/guide/component/popuppicker.html">PopupPicker 弹出选择</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/radio.html">Radio 单选按钮</a> →</span>
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/pullrefresh.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/scroll.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
