@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>NoticeBar 通知栏 — Feui</title>
+    <title>Slidbtn 滑动操作 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -479,7 +479,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/noticebar.html" class="sidebar-link current">NoticeBar 通知栏</a>
+      <a href="/docs/feui/guide/component/noticebar.html" class="sidebar-link">NoticeBar 通知栏</a>
     </li>
   
     
@@ -663,7 +663,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/slidbtn.html" class="sidebar-link new">Slidbtn 滑动操作</a>
+      <a href="/docs/feui/guide/component/slidbtn.html" class="sidebar-link current new">Slidbtn 滑动操作</a>
     </li>
   
     
@@ -690,21 +690,18 @@
 
 
 
-<div  id='content' class="content guide with-sidebar noticebar-guide">
+<div  id='content' class="content guide with-sidebar slidbtn-guide">
   <div class='content_box'>
     
-      <h1>NoticeBar 通知栏</h1>
+      <h1>Slidbtn 滑动操作</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/noticebar">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; NoticeBar &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [NoticeBar.name]: NoticeBar</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span></span></div><div class="line"><span class="tag">  <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，家人竟然忘了告知！哇哈哈哈</span></span></div><div class="line"><span class="tag"><span class="string">  哈哈哈哈哈哈，红红火火哈哈哈哈哈红红火火哈哈！"</span>  </span></div><div class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="添加左边图标"><a href="#添加左边图标" class="headerlink" title="添加左边图标"></a>添加左边图标</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">divider</span>&gt;</span>加个小喇叭-图片<span class="tag">&lt;/<span class="name">divider</span>&gt;</span> </div><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span></span></div><div class="line"><span class="tag">  <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，家人竟然忘了告知！哇哈哈哈哈</span></span></div><div class="line"><span class="tag"><span class="string">  哈哈哈哈哈，红红火火哈哈哈哈哈红红火火哈哈！"</span>  <span class="attr">leftIcon</span>=<span class="string">'notice'</span> </span></div><div class="line"><span class="tag">  <span class="attr">leftImg</span>=<span class="string">"data:image/png;base64,iV...II="</span></span></div><div class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">divider</span>&gt;</span>加个小喇叭-字体图标<span class="tag">&lt;/<span class="name">divider</span>&gt;</span> </div><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span></span></div><div class="line"><span class="tag">  <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，家人竟然忘了告知！哇哈哈哈哈哈</span></span></div><div class="line"><span class="tag"><span class="string">  哈哈哈哈，红红火火哈哈哈哈哈红红火火哈哈！"</span>  <span class="attr">leftIcon</span>=<span class="string">'notice'</span> </span></div><div class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="不滚动效果"><a href="#不滚动效果" class="headerlink" title="不滚动效果"></a>不滚动效果</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span> <span class="attr">:scrollable</span>=<span class="string">"false"</span>  <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，</span></span></div><div class="line"><span class="tag"><span class="string">  家人竟然忘了告知！哇哈哈哈哈哈哈哈哈哈，红红火火哈哈哈哈哈红红火火哈哈！"</span> &gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="添加右边图标"><a href="#添加右边图标" class="headerlink" title="添加右边图标"></a>添加右边图标</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">divider</span>&gt;</span>有图标能关闭<span class="tag">&lt;/<span class="name">divider</span>&gt;</span> </div><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span>   <span class="attr">type</span>=<span class="string">"beclosed"</span> <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，家人竟</span></span></div><div class="line"><span class="tag"><span class="string">  然忘了告知！哇哈哈哈哈哈哈哈哈哈，红红火火哈哈哈哈哈红红火火哈哈！"</span> &gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">divider</span>&gt;</span>有图标不能关闭<span class="tag">&lt;/<span class="name">divider</span>&gt;</span> </div><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span> <span class="attr">type</span>=<span class="string">"link"</span> <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，家人竟然忘</span></span></div><div class="line"><span class="tag"><span class="string">  了告知！哇哈哈哈哈哈哈哈哈哈，红红火火哈哈哈哈哈红红火火哈哈！"</span> &gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="自定义颜色"><a href="#自定义颜色" class="headerlink" title="自定义颜色"></a>自定义颜色</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span> <span class="attr">type</span>=<span class="string">"link"</span> <span class="attr">color</span>=<span class="string">'#fff'</span> <span class="attr">background</span>=<span class="string">'#4a90e2'</span> <span class="attr">leftIcon</span>=<span class="string">'notice'</span>  </span></div><div class="line"><span class="tag">  <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，家人竟然忘了告知！哇哈哈哈哈哈哈哈哈哈，</span></span></div><div class="line"><span class="tag"><span class="string">  红红火火哈哈哈哈哈红红火火哈哈！"</span> &gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="延时特效"><a href="#延时特效" class="headerlink" title="延时特效"></a>延时特效</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span> <span class="attr">type</span>=<span class="string">"link"</span> <span class="attr">color</span>=<span class="string">'#fff'</span> <span class="attr">delay</span>=<span class="string">2</span>  <span class="attr">background</span>=<span class="string">'#4a90e2'</span> </span></div><div class="line"><span class="tag">  <span class="attr">leftIcon</span>=<span class="string">'notice'</span>  <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，家人竟然忘了告知！</span></span></div><div class="line"><span class="tag"><span class="string">  哇哈哈哈哈哈哈哈哈哈，红红火火哈哈哈哈哈红红火火哈哈！"</span> &gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="设置滚动速度"><a href="#设置滚动速度" class="headerlink" title="设置滚动速度"></a>设置滚动速度</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-noticebar</span> <span class="attr">type</span>=<span class="string">"link"</span> <span class="attr">color</span>=<span class="string">'#fff'</span> <span class="attr">speed</span>=<span class="string">200</span>  <span class="attr">background</span>=<span class="string">'#4a90e2'</span> </span></div><div class="line"><span class="tag">  <span class="attr">leftIcon</span>=<span class="string">'notice'</span>  <span class="attr">text</span>=<span class="string">"学生辗转8千里回家才发现房子被拆，家人竟然忘了告知！</span></span></div><div class="line"><span class="tag"><span class="string">  哇哈哈哈哈哈哈哈哈哈，红红火火哈哈哈哈哈红红火火哈哈！"</span> &gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-noticebar</span>&gt;</span></div></pre></td></tr></table></figure>
+      <p><a href="https://feui.gitee.io/#/slidbtn">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Slidbtn &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Slidbtn.name]: Slidbtn,</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    items: [],</div><div class="line">    infiniteCount: <span class="number">0</span>,</div><div class="line">    hasHeader: <span class="literal">true</span></div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">methods: &#123;</div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="正经用法"><a href="#正经用法" class="headerlink" title="正经用法"></a>正经用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-slidbtn</span> <span class="attr">:right-width</span>=<span class="string">"65"</span> <span class="attr">:left-width</span>=<span class="string">"65"</span> @<span class="attr">on-click-left</span>=<span class="string">'clickLeft'</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-click-right</span>=<span class="string">'clickRight'</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"left"</span> &gt;</span>选择<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"单元格1"</span> <span class="attr">value</span>=<span class="string">"单元格1内容"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"right"</span> &gt;</span>删除<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-slidbtn</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="自定义按钮颜色"><a href="#自定义按钮颜色" class="headerlink" title="自定义按钮颜色"></a>自定义按钮颜色</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-slidbtn</span> <span class="attr">:right-width</span>=<span class="string">"65"</span> <span class="attr">:left-width</span>=<span class="string">"65"</span> <span class="attr">:bg-color</span>=<span class="string">"['green','red']"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-click-left</span>=<span class="string">'clickLeft'</span> @<span class="attr">on-click-right</span>=<span class="string">'clickRight'</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"left"</span> &gt;</span>选择<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"单元格1"</span> <span class="attr">value</span>=<span class="string">"单元格1内容"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"right"</span> &gt;</span>删除<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-slidbtn</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="只能左滑"><a href="#只能左滑" class="headerlink" title="只能左滑"></a>只能左滑</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-slidbtn</span> <span class="attr">:right-width</span>=<span class="string">"65"</span> @<span class="attr">on-click-left</span>=<span class="string">'clickLeft'</span> @<span class="attr">on-click-right</span>=<span class="string">'clickRight'</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"单元格1"</span> <span class="attr">value</span>=<span class="string">"单元格1内容"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"right"</span> &gt;</span>删除<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-slidbtn</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="只能右滑"><a href="#只能右滑" class="headerlink" title="只能右滑"></a>只能右滑</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-slidbtn</span> <span class="attr">:left-width</span>=<span class="string">"65"</span> @<span class="attr">on-click-left</span>=<span class="string">'clickLeft'</span> @<span class="attr">on-click-right</span>=<span class="string">'clickRight'</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"left"</span> &gt;</span>选择<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"单元格1"</span> <span class="attr">value</span>=<span class="string">"单元格1内容"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-slidbtn</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -717,64 +714,55 @@
 </thead>
 <tbody>
 <tr>
-<td>text</td>
-<td>滚动显示的文字</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>type</td>
-<td>通知栏右边图标样式</td>
-<td><code>String</code></td>
-<td>-</td>
-<td><code>beclosed</code>，<code>link</code></td>
-</tr>
-<tr>
-<td>leftImg</td>
-<td>左侧图标图片链接,优先级大于<code>leftIcon</code></td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>leftIcon</td>
-<td>左侧字体图标类型，与<code>leftImg</code>任选其一即可</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>color</td>
-<td>文本颜色</td>
-<td><code>String</code></td>
-<td><code>#FF5B00</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>background</td>
-<td>背景颜色</td>
-<td><code>String</code></td>
-<td><code>#FFE1AF</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>delay</td>
-<td>动画延迟时间，单位秒</td>
+<td>left-width</td>
+<td>左侧按钮宽度</td>
 <td><code>Number</code></td>
-<td><code>1</code></td>
+<td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>speed</td>
-<td>滚动速率，单位px</td>
+<td>right-width</td>
+<td>右侧按钮宽度</td>
 <td><code>Number</code></td>
-<td><code>50</code></td>
+<td><code>false</code></td>
+<td><code>true</code>,<code>false</code></td>
+</tr>
+<tr>
+<td>bg-color</td>
+<td>按钮的背景颜色</td>
+<td><code>Array</code>,<code>Object</code></td>
+<td><code>[&#39;#4a90e2&#39;,&#39;#FF4444&#39;]</code></td>
 <td>-</td>
 </tr>
 <tr>
 <td>-</td>
 <td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th>Slot名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>right</td>
+<td>右侧内容 slot</td>
+<td>-</td>
+</tr>
+<tr>
+<td>left</td>
+<td>左侧内容 slot</td>
+<td>-</td>
+</tr>
+<tr>
 <td>-</td>
 <td>-</td>
 <td>-</td>
@@ -792,12 +780,19 @@
 </thead>
 <tbody>
 <tr>
-<td><code>on-click</code></td>
+<td>on-click-left</td>
 <td>-</td>
-<td>通知栏点击事件</td>
+<td>点击左侧按钮时触发</td>
 <td>-</td>
 </tr>
 <tr>
+<td>on-click-right</td>
+<td>-</td>
+<td>点击右侧按钮时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
@@ -809,16 +804,14 @@
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/lazyload.html">Lazyload 懒加载</a></span>
+          <span>← <a href="/docs/feui/guide/component/scroll.html">Scroll 滑动加载</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/pullrefresh.html">Pullrefresh 刷新加载</a> →</span>
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/noticebar.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/slidbtn.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
