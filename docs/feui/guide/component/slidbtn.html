@@ -663,7 +663,21 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/slidbtn.html" class="sidebar-link current new">Slidbtn 滑动操作</a>
+      <a href="/docs/feui/guide/component/slidbtn.html" class="sidebar-link current">Slidbtn 滑动操作</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/swiper.html" class="sidebar-link new">Swiper 滑动操作</a>
     </li>
   
     
@@ -697,7 +711,7 @@
     
     <div id='pContent'>
       <p><a href="https://feui.gitee.io/#/slidbtn">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Slidbtn &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Slidbtn.name]: Slidbtn,</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    items: [],</div><div class="line">    infiniteCount: <span class="number">0</span>,</div><div class="line">    hasHeader: <span class="literal">true</span></div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">methods: &#123;</div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Slidbtn &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Slidbtn.name]: Slidbtn,</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">methods: &#123;</div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="正经用法"><a href="#正经用法" class="headerlink" title="正经用法"></a>正经用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-slidbtn</span> <span class="attr">:right-width</span>=<span class="string">"65"</span> <span class="attr">:left-width</span>=<span class="string">"65"</span> @<span class="attr">on-click-left</span>=<span class="string">'clickLeft'</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-click-right</span>=<span class="string">'clickRight'</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"left"</span> &gt;</span>选择<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"单元格1"</span> <span class="attr">value</span>=<span class="string">"单元格1内容"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"right"</span> &gt;</span>删除<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-slidbtn</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="自定义按钮颜色"><a href="#自定义按钮颜色" class="headerlink" title="自定义按钮颜色"></a>自定义按钮颜色</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-slidbtn</span> <span class="attr">:right-width</span>=<span class="string">"65"</span> <span class="attr">:left-width</span>=<span class="string">"65"</span> <span class="attr">:bg-color</span>=<span class="string">"['green','red']"</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-click-left</span>=<span class="string">'clickLeft'</span> @<span class="attr">on-click-right</span>=<span class="string">'clickRight'</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"left"</span> &gt;</span>选择<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"单元格1"</span> <span class="attr">value</span>=<span class="string">"单元格1内容"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"right"</span> &gt;</span>删除<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-slidbtn</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="只能左滑"><a href="#只能左滑" class="headerlink" title="只能左滑"></a>只能左滑</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-slidbtn</span> <span class="attr">:right-width</span>=<span class="string">"65"</span> @<span class="attr">on-click-left</span>=<span class="string">'clickLeft'</span> @<span class="attr">on-click-right</span>=<span class="string">'clickRight'</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-group</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">fe-cell</span> <span class="attr">title</span>=<span class="string">"单元格1"</span> <span class="attr">value</span>=<span class="string">"单元格1内容"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-cell</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"right"</span> &gt;</span>删除<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-slidbtn</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -806,6 +820,8 @@
         
           <span>← <a href="/docs/feui/guide/component/scroll.html">Scroll 滑动加载</a></span>
         
+        
+          <span style="float: right;"><a href="/docs/feui/guide/component/swiper.html">Swiper 滑动操作</a> →</span>
         
       </div>
     
