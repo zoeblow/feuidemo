@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Datetime 日期 — Feui</title>
+    <title>Toast 提示 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -565,7 +565,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/datetime.html" class="sidebar-link current">Datetime 日期</a>
+      <a href="/docs/feui/guide/component/datetime.html" class="sidebar-link">Datetime 日期</a>
     </li>
   
     
@@ -691,7 +691,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/toast.html" class="sidebar-link new">Toast 提示</a>
+      <a href="/docs/feui/guide/component/toast.html" class="sidebar-link current new">Toast 提示</a>
     </li>
   
     
@@ -718,19 +718,77 @@
 
 
 
-<div  id='content' class="content guide with-sidebar datetime-guide">
+<div  id='content' class="content guide with-sidebar toast-guide">
   <div class='content_box'>
     
-      <h1>Datetime 日期</h1>
+      <h1>Toast 提示</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/datetime">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Datetime &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Datetime.name]: Datetime</div><div class="line">&#125;,</div><div class="line">methods: &#123;</div><div class="line">  change (value) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'change'</span>, value)</div><div class="line">  &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"默认格式: YYYY-MM-DD"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"value1"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="定义小时分钟列表"><a href="#定义小时分钟列表" class="headerlink" title="定义小时分钟列表"></a>定义小时分钟列表</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"定义小时分钟列表"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"hourListValue"</span> <span class="attr">format</span>=<span class="string">"YYYY-MM-DD HH:mm"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:hour-list</span>=<span class="string">"['09', '10', '11', '12', '13', '14', '15', '16']"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:minute-list</span>=<span class="string">"['00', '15', '30', '45']"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="只读模式"><a href="#只读模式" class="headerlink" title="只读模式"></a>只读模式</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"Readonly"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"valueReadonly"</span> <span class="attr">:readonly</span>=<span class="string">"readonly"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="设置开始时间和结束日"><a href="#设置开始时间和结束日" class="headerlink" title="设置开始时间和结束日"></a>设置开始时间和结束日</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置开始时间和结束日期 2015-11-11 ~ 2018-11-11"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"limitHourValue"</span> <span class="attr">:start-date</span>=<span class="string">"startDate"</span> <span class="attr">:end-date</span>=<span class="string">"endDate"</span> </span></div><div class="line"><span class="tag">    <span class="attr">format</span>=<span class="string">"YYYY-MM-DD HH:mm"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"开始时间"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+      <p><a href="https://feui.gitee.io/#/swiper">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><p><strong>main.js</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</div><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">"feui"</span>;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.Toast = Toast;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">methods: &#123;</div><div class="line">  showSuccess() &#123;</div><div class="line">    Toast.success(&#123;</div><div class="line">    duration: <span class="number">1500</span>,</div><div class="line">    message: <span class="string">"操作成功"</span></div><div class="line">    &#125;);</div><div class="line">  &#125;,</div><div class="line">  showError() &#123;</div><div class="line">    Toast.fail(&#123;</div><div class="line">      duration: <span class="number">1500</span>,</div><div class="line">      message: <span class="string">"失败提示"</span></div><div class="line">    &#125;);</div><div class="line">  &#125;,</div><div class="line">  showWarn() &#123;</div><div class="line">    Toast.info(&#123;</div><div class="line">      duration: <span class="number">1500</span>,</div><div class="line">      message: <span class="string">"操作警告"</span></div><div class="line">    &#125;);</div><div class="line">  &#125;,</div><div class="line">  showLoading() &#123;</div><div class="line">    Toast.loading(&#123; <span class="attr">duration</span>: <span class="number">1501</span>, <span class="attr">mask</span>: <span class="literal">true</span> &#125;);</div><div class="line">  &#125;,</div><div class="line">  showText() &#123;</div><div class="line">    Toast(&#123;</div><div class="line">      duration: <span class="number">1500</span>,</div><div class="line">      message: <span class="string">"显示文字咯咯咯.."</span></div><div class="line">    &#125;);</div><div class="line">  &#125;,</div><div class="line">  gaoji() &#123;</div><div class="line">    <span class="keyword">const</span> toast = Toast.loading(&#123;</div><div class="line">      duration: <span class="number">0</span>, <span class="comment">// 持续展示 toast</span></div><div class="line">      forbidClick: <span class="literal">true</span>, <span class="comment">// 禁用背景点击</span></div><div class="line">      message: <span class="string">"倒计时 3 秒"</span></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">let</span> second = <span class="number">3</span>;</div><div class="line">    <span class="keyword">const</span> timer = setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      second--;</div><div class="line">      <span class="keyword">if</span> (second) &#123;</div><div class="line">          toast.message = <span class="string">`倒计时 <span class="subst">$&#123;second&#125;</span> 秒`</span>;</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">          clearInterval(timer);</div><div class="line">          Toast.clear();</div><div class="line">      &#125;</div><div class="line">    &#125;, <span class="number">1000</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="成功提示"><a href="#成功提示" class="headerlink" title="成功提示"></a>成功提示</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"showSuccess"</span>&gt;</span>成功提示<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="失败提示"><a href="#失败提示" class="headerlink" title="失败提示"></a>失败提示</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"showError"</span>&gt;</span>失败提示<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="警告提示"><a href="#警告提示" class="headerlink" title="警告提示"></a>警告提示</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"showWarn"</span>&gt;</span>警告提示<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="Loading"><a href="#Loading" class="headerlink" title="Loading"></a>Loading</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"showText"</span>&gt;</span>Loading<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="Loading-1"><a href="#Loading-1" class="headerlink" title="Loading"></a>Loading</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"showLoading"</span>&gt;</span>Loading<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"gaoji"</span>&gt;</span>高级用法<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="提供方法"><a href="#提供方法" class="headerlink" title="提供方法"></a>提供方法</h3><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>参数</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toast</td>
+<td>展示提示</td>
+<td><code>options</code>,<code>message</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Toast.success</td>
+<td>展示成功提示</td>
+<td><code>options</code>,<code>message</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Toast.fail</td>
+<td>展示失败提示</td>
+<td><code>options</code>,<code>message</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Toast.info</td>
+<td>展示警告提示</td>
+<td><code>options</code>,<code>message</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Toast.loading</td>
+<td>展示加载提示</td>
+<td><code>options</code>,<code>message</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Toast.clear</td>
+<td>关闭提示</td>
+<td><code>clearAll</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -742,283 +800,49 @@
 </thead>
 <tbody>
 <tr>
-<td>value</td>
-<td>表单值，<code>v-model</code>绑定</td>
+<td>type</td>
+<td>提示类型</td>
+<td><code>String</code></td>
+<td><code>text</code></td>
+<td><code>text</code>,<code>loading</code>,<code>success</code>,<code>fail</code>,<code>html</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td>内容</td>
 <td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>title</td>
-<td>标题</td>
+<td>position</td>
+<td>位置</td>
 <td><code>String</code></td>
-<td>-</td>
-<td>-</td>
+<td><code>middle</code></td>
+<td><code>top</code>,<code>bottom</code>,<code>middle</code></td>
 </tr>
 <tr>
-<td>format</td>
-<td>时间格式</td>
-<td><code>String</code></td>
-<td>YYYY-MM-DD</td>
-<td>YYYY-MM-DD HH:mm:ss等</td>
-</tr>
-<tr>
-<td>inline-desc</td>
-<td>描述字符</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>placeholder</td>
-<td>提示文字，当value为空时显示</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>min-year</td>
-<td>可选择的最小年份</td>
-<td><code>Number</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>max-year</td>
-<td>可选择的最大年份</td>
-<td><code>Number</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>min-hour</td>
-<td>限定小时最小值</td>
-<td><code>Number</code></td>
-<td><code>0</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>max-hour</td>
-<td>限定小时最大值</td>
-<td><code>Number</code></td>
-<td><code>23</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>confirm-text</td>
-<td>确认按钮文字</td>
-<td><code>String</code></td>
-<td><code>ok(确认)</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>cancel-text</td>
-<td>取消按钮文字</td>
-<td><code>String</code></td>
-<td><code>cancel(取消)</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>clear-text</td>
-<td>显示在中间的自定义按钮的文字</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>year-row</td>
-<td>年份的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>month-row</td>
-<td>月份的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>day-row</td>
-<td>日期的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>hour-row</td>
-<td>小时的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>minute-row</td>
-<td>分钟的渲染模板</td>
-<td><code>String</code></td>
-<td>{value}</td>
-<td>-</td>
-</tr>
-<tr>
-<td>start-date</td>
-<td>限定最小日期，格式必须为 YYYY-MM-DD</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>end-date</td>
-<td>限定最大日期，格式必须为 YYYY-MM-DD</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>required</td>
-<td>是否必填</td>
+<td>mask</td>
+<td>是否显示背景蒙层</td>
 <td><code>Boolean</code></td>
 <td><code>false</code></td>
 <td><code>false</code>,<code>true</code></td>
 </tr>
 <tr>
-<td>display-format</td>
-<td>自定义显示值</td>
-<td><code>Function</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>readonly</td>
-<td>只读模式，显示类似于 cell</td>
+<td>forbidClick</td>
+<td>禁止背景点击</td>
 <td><code>Boolean</code></td>
 <td><code>false</code></td>
 <td><code>false</code>,<code>true</code></td>
 </tr>
 <tr>
-<td>show</td>
-<td>控制显示，要求 vue^2.3</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>false</code>,<code>true</code></td>
-</tr>
-<tr>
-<td>hour-list</td>
-<td>定义小时列表</td>
-<td><code>Array</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>minute-list</td>
-<td>定义分钟列表</td>
-<td><code>Array</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>default-selected-value</td>
-<td>设置默认选中日期，当前 value 为空时有效</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>compute-days-function</td>
-<td>动态设置日期列表，参数为 ({year, month, min, max}, generateRange)</td>
-<td><code>Function</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>compute-hours-function</td>
-<td>动态设置小时列表，参数为 (value, isToday, generateRange)</td>
-<td><code>Function</code></td>
-<td>-</td>
-<td>-</td>
+<td>duration</td>
+<td>展示时长(ms)</td>
+<td><code>Number</code></td>
+<td><code>3000</code></td>
+<td>值为 0 时，toast 不会消失</td>
 </tr>
 <tr>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
-<thead>
-<tr>
-<th>Slot名</th>
-<th>说明</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>default</td>
-<td>触发元素内容</td>
-<td>-</td>
-</tr>
-<tr>
-<td>title</td>
-<td>title slot</td>
-<td>-</td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
-<thead>
-<tr>
-<th>事件名</th>
-<th>参数</th>
-<th>说明</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>on-change</td>
-<td><code>value</code></td>
-<td>表单值变表单值变化时触发, 参数<code>(newVal)</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>on-clear</td>
-<td>-</td>
-<td>点击显示在中间的自定义按钮时触发</td>
-<td>-</td>
-</tr>
-<tr>
-<td>on-show</td>
-<td>-</td>
-<td>弹窗显示时触发</td>
-<td>-</td>
-</tr>
-<tr>
-<td>on-hide</td>
-<td><code>type</code></td>
-<td>弹窗关闭时触发</td>
-<td><code>type</code> 是<code>[cancel, confirm]</code>其中之一</td>
-</tr>
-<tr>
-<td>on-confirm</td>
-<td>-</td>
-<td>点击确定按钮时触发，等同于事件<code>on-hide(confirm)</code></td>
-<td>-</td>
-</tr>
-<tr>
-<td>on-cancel</td>
-<td>-</td>
-<td>点击取消按钮或者遮罩时触发，等同于事件<code>on-hide(cancel)</code></td>
-<td>-</td>
-</tr>
-<tr>
 <td>-</td>
 <td>-</td>
 <td>-</td>
@@ -1031,16 +855,14 @@
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/actionsheet.html">Actionsheet 地址栏</a></span>
+          <span>← <a href="/docs/feui/guide/component/swiper.html">Swiper 滑动操作</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/dialog.html">Dialog 弹窗</a> →</span>
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/datetime.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/toast.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
