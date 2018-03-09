@@ -60,6 +60,7 @@
 * [x] Popup
 * [x] Popup-picker
 * [x] Pullrefresh
+* [x] Pwdinput
 * [x] Qrcode
 * [x] Radio
 * [x] Range
@@ -81,6 +82,18 @@
 * [x] Uploader
 
 <br/><br/><br/>
+## V 0.4.11
+
+### 已完成
+
+> 添加Pwdinput组件部分功能<br/>
+
+## V 0.4.10
+
+### 已完成
+
+> 修改Uploader组件部分功能<br/>
+
 ## V 0.4.9
 
 ### 已完成
