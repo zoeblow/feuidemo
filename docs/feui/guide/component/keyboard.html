@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>栗子 Demo — Feui</title>
+    <title>Keyboard 键盘 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -153,7 +153,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/demo.html" class="sidebar-link current">栗子 Demo</a>
+      <a href="/docs/feui/guide/component/demo.html" class="sidebar-link">栗子 Demo</a>
     </li>
   
     
@@ -549,7 +549,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/keyboard.html" class="sidebar-link new">Keyboard 键盘</a>
+      <a href="/docs/feui/guide/component/keyboard.html" class="sidebar-link current new">Keyboard 键盘</a>
     </li>
   
     
@@ -746,24 +746,160 @@
 
 
 
-<div  id='content' class="content guide with-sidebar demo-guide">
+<div  id='content' class="content guide with-sidebar keyboard-guide">
   <div class='content_box'>
     
-      <h1>栗子 Demo</h1>
+      <h1>Keyboard 键盘</h1>
     
     <div id='pContent'>
-      <p>举个栗子</p>
-<div style="width:434px;height:861px;background:url('/docs/images/iphoneX-big.png');margin:15px;position: relative;"><br>  <iframe style="-webkit-mask-image: url(data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);width:373px;height:765px; border: 0; outline: 0;margin:31px 0 0 30.4px;border-radius:4px 3px 30px 30px;" src="https://feui.gitee.io"></iframe><br></div>
+      <p><a href="https://feui.gitee.io/#/keyboard">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Keyboard &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Keyboard.name]: Keyboard</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    showKeyboard1: <span class="literal">false</span>,</div><div class="line">    showKeyboard2: <span class="literal">false</span></div><div class="line">  &#125;;</div><div class="line">&#125;,</div><div class="line">methods:&#123;</div><div class="line">  onInput(val)&#123;</div><div class="line">    <span class="built_in">console</span>.log(val);</div><div class="line">  &#125;,</div><div class="line">  onDelect(val) &#123;</div><div class="line">    <span class="built_in">console</span>.log(val);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="普通键盘"><a href="#普通键盘" class="headerlink" title="普通键盘"></a>普通键盘</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">:gradients</span>=<span class="string">"['#1D62F0', '#19D5FD']"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">click.native</span>=<span class="string">'showKeyboard1 = !showKeyboard1'</span> &gt;</span></div><div class="line">  打开普通键盘</div><div class="line"><span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-keyboard</span> <span class="attr">:show</span>=<span class="string">"showKeyboard1"</span> <span class="attr">extra-key</span>=<span class="string">'.'</span> </span></div><div class="line"><span class="tag">  @<span class="attr">input</span>=<span class="string">"onInput"</span> @<span class="attr">delete</span>=<span class="string">"onDelete"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">blur</span>=<span class="string">"showKeyboard1 = false"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-keyboard</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="自定义键盘"><a href="#自定义键盘" class="headerlink" title="自定义键盘"></a>自定义键盘</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">:gradients</span>=<span class="string">"['#0D2633', '#007FBF']"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">click.native</span>=<span class="string">'showKeyboard2 = !showKeyboard2'</span> &gt;</span></div><div class="line">  打开自定义键盘</div><div class="line"><span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-keyboard</span> <span class="attr">:show</span>=<span class="string">"showKeyboard2"</span> <span class="attr">extra-key</span>=<span class="string">'X'</span> </span></div><div class="line"><span class="tag">  <span class="attr">theme</span>=<span class="string">'custom'</span> @<span class="attr">input</span>=<span class="string">"onInput"</span> <span class="attr">close-button-text</span>=<span class="string">"完成/确定"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">delete</span>=<span class="string">"onDelete"</span> @<span class="attr">blur</span>=<span class="string">"showKeyboard2 = false"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-keyboard</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show</td>
+<td>是否显示键盘</td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>title</td>
+<td>键盘标题</td>
+<td><code>String</code></td>
+<td><code></code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>extra-key</td>
+<td>额外按键内容</td>
+<td><code>String</code></td>
+<td><code></code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>主题</td>
+<td><code>String</code></td>
+<td><code>default</code></td>
+<td><code>custom</code>,<code>default</code></td>
+</tr>
+<tr>
+<td>z-index</td>
+<td>键盘的<code>z-index</code>值</td>
+<td><code>Number</code></td>
+<td><code>100</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>transition</td>
+<td>是否有过场动画</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>close-button-text</td>
+<td>关闭/确定按钮文字，空不显示</td>
+<td><code>String</code></td>
+<td><code></code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>show-delete-key</td>
+<td>是否显示关闭键</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>hide-on-click-outside</td>
+<td>点击外部时是否收起键盘</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>false</code>,<code>true</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
+<thead>
+<tr>
+<th>事件名</th>
+<th>参数</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>input</td>
+<td><code>val</code></td>
+<td>点击按键时触发</td>
+<td>参数为按键内容</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>-</td>
+<td>点击删除时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>-</td>
+<td>点击非键盘区域时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>show</td>
+<td>-</td>
+<td>键盘显示时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>hide</td>
+<td>-</td>
+<td>键盘隐藏时触发</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
     </div>
     
       <div class="guide-links">
+        
+          <span>← <a href="/docs/feui/guide/component/textarea.html">Textarea 文本域</a></span>
         
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/demo.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/keyboard.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
