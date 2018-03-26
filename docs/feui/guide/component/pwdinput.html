@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Picker 选择 — Feui</title>
+    <title>PwdInput 密码输入框 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -563,7 +563,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/pwdinput.html" class="sidebar-link new">PwdInput 密码输入框</a>
+      <a href="/docs/feui/guide/component/pwdinput.html" class="sidebar-link current new">PwdInput 密码输入框</a>
     </li>
   
     
@@ -635,7 +635,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/picker.html" class="sidebar-link current">Picker 选择</a>
+      <a href="/docs/feui/guide/component/picker.html" class="sidebar-link">Picker 选择</a>
     </li>
   
     
@@ -760,18 +760,21 @@
 
 
 
-<div  id='content' class="content guide with-sidebar picker-guide">
+<div  id='content' class="content guide with-sidebar pwdinput-guide">
   <div class='content_box'>
     
-      <h1>Picker 选择</h1>
+      <h1>PwdInput 密码输入框</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/picker">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Picker &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"><span class="keyword">let</span> years = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">2000</span>; i &lt;= <span class="number">2030</span>; i++) &#123;</div><div class="line">  years.push(&#123;</div><div class="line">    name: i + <span class="string">"年"</span>,</div><div class="line">    value: i + <span class="string">""</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Picker.name]: Picker,</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    years: [years],</div><div class="line">    years1: [years, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>]],</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">methods: &#123;</div><div class="line">  change(value) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"new Value"</span>, value);</div><div class="line">  &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">divider</span>&gt;</span>默认，不设置默认值时选中第一个 &#123;&#123;year1&#125;&#125;<span class="tag">&lt;/<span class="name">divider</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-picker</span> <span class="attr">:data</span>=<span class="string">'years'</span> <span class="attr">v-model</span>=<span class="string">'year1'</span> </span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">'change'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-picker</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="双向绑定"><a href="#双向绑定" class="headerlink" title="双向绑定"></a>双向绑定</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">divider</span>&gt;</span>双向绑定<span class="tag">&lt;/<span class="name">divider</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-picker</span> <span class="attr">:data</span>=<span class="string">'years'</span> <span class="attr">v-model</span>=<span class="string">'year3'</span> </span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">'change3'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-picker</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">'year5'</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">v-for</span>=<span class="string">'one in years[0]'</span> <span class="attr">:value</span>=<span class="string">'one.value'</span></span></div><div class="line"><span class="tag">   <span class="attr">:key</span>=<span class="string">'one.index'</span>&gt;</span>&#123;&#123;one.name&#125;&#125;<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="非联动多列"><a href="#非联动多列" class="headerlink" title="非联动多列"></a>非联动多列</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">divider</span>&gt;</span>非联动多列<span class="tag">&lt;/<span class="name">divider</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-picker</span> <span class="attr">:data</span>=<span class="string">'years1'</span> <span class="attr">v-model</span>=<span class="string">'year4'</span></span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">'change'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-picker</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="非联动多列-1"><a href="#非联动多列-1" class="headerlink" title="非联动多列"></a>非联动多列</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">divider</span>&gt;</span>3列的数据，只显示两列<span class="tag">&lt;/<span class="name">divider</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-picker</span> <span class="attr">:data</span>=<span class="string">'year7'</span> <span class="attr">:fixed-columns</span>=<span class="string">"2"</span> <span class="attr">:columns</span>=<span class="string">3</span> </span></div><div class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">'year8Value'</span> @<span class="attr">on-change</span>=<span class="string">'change'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-picker</span>&gt;</span></div></pre></td></tr></table></figure>
+      <p><a href="https://feui.gitee.io/#/pwdinput">Live Demo&gt;&gt;</a></p>
+<blockquote>
+<p><code>fe-pwdinput</code> 请配合<code>fe-keyboard</code>使用。</p>
+</blockquote>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; PwdInput &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [PwdInput.name]: PwdInput</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    value: <span class="string">''</span>,</div><div class="line">    showKeyboard: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-pwdinput</span> <span class="attr">:value</span>=<span class="string">"value"</span> <span class="attr">info</span>=<span class="string">"密码为 6 位数字"</span></span></div><div class="line"><span class="tag">  @<span class="attr">focus</span>=<span class="string">"showKeyboard = true"</span> &gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-pwdinput</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="输入明文"><a href="#输入明文" class="headerlink" title="输入明文"></a>输入明文</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-pwdinput</span> <span class="attr">:value</span>=<span class="string">"value"</span> <span class="attr">info</span>=<span class="string">""</span> </span></div><div class="line"><span class="tag">  @<span class="attr">focus</span>=<span class="string">"showKeyboard = true"</span> <span class="attr">:isPwd</span>=<span class="string">'false'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-pwdinput</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="输入明文-1"><a href="#输入明文-1" class="headerlink" title="输入明文"></a>输入明文</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-pwdinput</span> <span class="attr">:value</span>=<span class="string">"value"</span> <span class="attr">info</span>=<span class="string">"密码为 6 位数字"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">focus</span>=<span class="string">"showKeyboard = true"</span> <span class="attr">currentColor</span>=<span class="string">'#4a90e2'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-pwdinput</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-keyboard</span> <span class="attr">:show</span>=<span class="string">"showKeyboard"</span> @<span class="attr">input</span>=<span class="string">"onInput"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">delete</span>=<span class="string">"onDelete"</span> @<span class="attr">blur</span>=<span class="string">"showKeyboard = false"</span>  <span class="attr">extra-key</span>=<span class="string">'X'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-keyboard</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -785,38 +788,38 @@
 <tbody>
 <tr>
 <td>value</td>
-<td>表单值，使用 v-model 绑定</td>
-<td><code>Array</code></td>
+<td>输入框中的值</td>
+<td><code>String</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>data</td>
-<td>选项列表数据</td>
+<td>info</td>
+<td>输入框下的提示文字</td>
+<td><code>String</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>length</td>
+<td>密码位数</td>
 <td><code>Number</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>columns</td>
-<td>指定联动模式下的列数，当不指定时表示非联动</td>
-<td><code>Number</code></td>
-<td>-</td>
+<td><code>6</code></td>
 <td>-</td>
 </tr>
 <tr>
-<td>fixed-columns</td>
-<td>指定显示多少列，隐藏多余的</td>
-<td><code>Array</code></td>
-<td>-</td>
-<td>-</td>
+<td>isPwd</td>
+<td>是否是密码模式</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><code>false</code>,<code>true</code></td>
 </tr>
 <tr>
-<td>column-width</td>
-<td>定义每一列宽度，只需要定义除最后一列宽度，最后一列自动宽度，<br> 比如对于3列选择，可以这样：[1/2, 1/5]</td>
-<td><code>Array</code></td>
+<td>currentColor</td>
+<td>当前输入框下颜色，如果为空则不显示</td>
+<td><code>String</code></td>
 <td>-</td>
-<td>-</td>
+<td>颜色名称<code>(red)</code>或者十六进制色值<code>(#4a90e2)</code></td>
 </tr>
 <tr>
 <td>-</td>
@@ -838,33 +841,9 @@
 </thead>
 <tbody>
 <tr>
-<td>on-change</td>
-<td><code>value</code></td>
-<td>选择值变化时触发</td>
+<td>focus</td>
 <td>-</td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><table>
-<thead>
-<tr>
-<th>方法名</th>
-<th>参数</th>
-<th>说明</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>getNameValues</td>
-<td>-</td>
-<td>根据<code>value</code>获取字面值</td>
+<td>输入框聚焦时触发</td>
 <td>-</td>
 </tr>
 <tr>
@@ -880,16 +859,14 @@
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/loading.html">Loading 加载中</a></span>
+          <span>← <a href="/docs/feui/guide/component/keyboard.html">Keyboard 键盘</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/popup.html">Popup 弹出</a> →</span>
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/picker.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/pwdinput.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>

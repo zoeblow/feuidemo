@@ -549,7 +549,21 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/keyboard.html" class="sidebar-link current new">Keyboard 键盘</a>
+      <a href="/docs/feui/guide/component/keyboard.html" class="sidebar-link current">Keyboard 键盘</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
+      <a href="/docs/feui/guide/component/pwdinput.html" class="sidebar-link new">PwdInput 密码输入框</a>
     </li>
   
     
@@ -753,7 +767,7 @@
     
     <div id='pContent'>
       <p><a href="https://feui.gitee.io/#/keyboard">Live Demo&gt;&gt;</a></p>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Keyboard &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Keyboard.name]: Keyboard</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    showKeyboard1: <span class="literal">false</span>,</div><div class="line">    showKeyboard2: <span class="literal">false</span></div><div class="line">  &#125;;</div><div class="line">&#125;,</div><div class="line">methods:&#123;</div><div class="line">  onInput(val)&#123;</div><div class="line">    <span class="built_in">console</span>.log(val);</div><div class="line">  &#125;,</div><div class="line">  onDelect(val) &#123;</div><div class="line">    <span class="built_in">console</span>.log(val);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Keyboard &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Keyboard.name]: Keyboard</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    showKeyboard1: <span class="literal">false</span>,</div><div class="line">    showKeyboard2: <span class="literal">false</span></div><div class="line">  &#125;</div><div class="line">&#125;,</div><div class="line">methods:&#123;</div><div class="line">  onInput(val)&#123;</div><div class="line">    <span class="built_in">console</span>.log(val);</div><div class="line">  &#125;,</div><div class="line">  onDelect(val) &#123;</div><div class="line">    <span class="built_in">console</span>.log(val);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="普通键盘"><a href="#普通键盘" class="headerlink" title="普通键盘"></a>普通键盘</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">:gradients</span>=<span class="string">"['#1D62F0', '#19D5FD']"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">click.native</span>=<span class="string">'showKeyboard1 = !showKeyboard1'</span> &gt;</span></div><div class="line">  打开普通键盘</div><div class="line"><span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-keyboard</span> <span class="attr">:show</span>=<span class="string">"showKeyboard1"</span> <span class="attr">extra-key</span>=<span class="string">'.'</span> </span></div><div class="line"><span class="tag">  @<span class="attr">input</span>=<span class="string">"onInput"</span> @<span class="attr">delete</span>=<span class="string">"onDelete"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">blur</span>=<span class="string">"showKeyboard1 = false"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-keyboard</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="自定义键盘"><a href="#自定义键盘" class="headerlink" title="自定义键盘"></a>自定义键盘</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">:gradients</span>=<span class="string">"['#0D2633', '#007FBF']"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">click.native</span>=<span class="string">'showKeyboard2 = !showKeyboard2'</span> &gt;</span></div><div class="line">  打开自定义键盘</div><div class="line"><span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-keyboard</span> <span class="attr">:show</span>=<span class="string">"showKeyboard2"</span> <span class="attr">extra-key</span>=<span class="string">'X'</span> </span></div><div class="line"><span class="tag">  <span class="attr">theme</span>=<span class="string">'custom'</span> @<span class="attr">input</span>=<span class="string">"onInput"</span> <span class="attr">close-button-text</span>=<span class="string">"完成/确定"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">delete</span>=<span class="string">"onDelete"</span> @<span class="attr">blur</span>=<span class="string">"showKeyboard2 = false"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-keyboard</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
@@ -894,6 +908,8 @@
         
           <span>← <a href="/docs/feui/guide/component/textarea.html">Textarea 文本域</a></span>
         
+        
+          <span style="float: right;"><a href="/docs/feui/guide/component/pwdinput.html">PwdInput 密码输入框</a> →</span>
         
       </div>
     
