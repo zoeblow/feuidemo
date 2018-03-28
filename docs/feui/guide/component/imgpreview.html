@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Button 按钮 — Feui</title>
+    <title>ImgPreview 图标 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -183,7 +183,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/button.html" class="sidebar-link current">Button 按钮</a>
+      <a href="/docs/feui/guide/component/button.html" class="sidebar-link">Button 按钮</a>
     </li>
   
     
@@ -747,7 +747,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/imgpreview.html" class="sidebar-link new">ImgPreview 图标</a>
+      <a href="/docs/feui/guide/component/imgpreview.html" class="sidebar-link current new">ImgPreview 图标</a>
     </li>
   
     
@@ -774,28 +774,16 @@
 
 
 
-<div  id='content' class="content guide with-sidebar button-guide">
+<div  id='content' class="content guide with-sidebar imgpreview-guide">
   <div class='content_box'>
     
-      <h1>Button 按钮</h1>
+      <h1>ImgPreview 图标</h1>
     
     <div id='pContent'>
-      <p><a href="https://feui.gitee.io/#/button">Live Demo&gt;&gt;</a></p>
-<blockquote>
-<p>按照Vue文档，在组件上绑定点击事件请使用<a href="mailto:`@click.native" target="_blank" rel="noopener">`@click.native</a>`。</p>
-</blockquote>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Button &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Button.name]: Button</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="按钮类型"><a href="#按钮类型" class="headerlink" title="按钮类型"></a>按钮类型</h4><p>支持<code>default</code>、<code>primary</code>、<code>warn</code>三种类型，默认为<code>default</code></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"default"</span>&gt;</span>页面次要操作<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span>&gt;</span>页面主要操作<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"warn"</span>&gt;</span>页面警告操作<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="小按钮"><a href="#小按钮" class="headerlink" title="小按钮"></a>小按钮</h4><p>将<code>mini</code>属性设置为<code>true</code> 可实现小按钮</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> <span class="attr">mini</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"default"</span> <span class="attr">mini</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"warn"</span> <span class="attr">mini</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="禁用状态"><a href="#禁用状态" class="headerlink" title="禁用状态"></a>禁用状态</h4><p>通过<code>disabled</code>属性来禁用按钮，此时按钮不可点击</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> <span class="attr">disabled</span>&gt;</span>页面主要操作 Disabled<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"default"</span> <span class="attr">disabled</span>&gt;</span>页面次要操作 Disabled<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"warn"</span> <span class="attr">disabled</span>&gt;</span>警告类操作 Disabled<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="加载状态"><a href="#加载状态" class="headerlink" title="加载状态"></a>加载状态</h4><p>按钮出现<code>loading</code>小菊花<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> <span class="attr">show-loading</span>&gt;</span>页面主要操作 Loading<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"default"</span> <span class="attr">show-loading</span>&gt;</span>页面次要操作 Loading<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"warn"</span> <span class="attr">show-loading</span>&gt;</span>警告类操作 Loading<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h4 id="按钮无背景"><a href="#按钮无背景" class="headerlink" title="按钮无背景"></a>按钮无背景</h4><p>设置<code>plain</code>为<code>true</code></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> <span class="attr">plain</span>&gt;</span>页面主要操作 Loading<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"default"</span> <span class="attr">plain</span>&gt;</span>页面次要操作 Loading<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"warn"</span> <span class="attr">plain</span>&gt;</span>警告类操作 Loading<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="link"><a href="#link" class="headerlink" title="link"></a>link</h4><p>当成跳转链接使用<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> <span class="attr">link</span>=<span class="string">"/demo"</span>&gt;</span>去demo页面<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">type</span>=<span class="string">"default"</span> <span class="attr">link</span>=<span class="string">"BACK"</span>&gt;</span>Back<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h4 id="背景渐变"><a href="#背景渐变" class="headerlink" title="背景渐变"></a>背景渐变</h4><p>接受一个数组 显示不同渐变色彩<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> <span class="attr">:gradients</span>=<span class="string">"['#1D62F0', '#19D5FD']"</span>&gt;</span>多彩背景<span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure></p>
+      <p><a href="https://feui.gitee.io/#/imgpreview">Live Demo&gt;&gt;</a></p>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; ImgPreview &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [ImgPreview.name]: ImgPreview</div><div class="line">&#125;,</div><div class="line">methods: &#123;</div><div class="line">    showImgPreview(position)&#123;</div><div class="line">      <span class="keyword">const</span> instance = ImgPreview([</div><div class="line">        <span class="string">'https://i.loli.net/2018/03/23/5ab4981e8a9af.jpg'</span>,</div><div class="line">        <span class="string">'https://i.loli.net/2018/03/23/5ab4981e683d6.jpg'</span>,</div><div class="line">        <span class="string">'https://i.loli.net/2018/03/23/5ab4996ef0026.jpg'</span>,</div><div class="line">        <span class="string">'https://i.loli.net/2018/03/23/5ab4981e79768.jpg'</span>,</div><div class="line">        <span class="string">'https://i.loli.net/2018/03/23/5ab4981e81a8e.jpg'</span></div><div class="line">      ], <span class="keyword">typeof</span> position === <span class="string">'number'</span> ? position : <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="预览图片"><a href="#预览图片" class="headerlink" title="预览图片"></a>预览图片</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"showImgPreview"</span>&gt;</span></div><div class="line">  预览图片</div><div class="line"><span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="指定初始位置"><a href="#指定初始位置" class="headerlink" title="指定初始位置"></a>指定初始位置</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-button</span> @<span class="attr">click.native</span>=<span class="string">"showImgPreview(1)"</span>&gt;</span></div><div class="line">  指定初始位置</div><div class="line"><span class="tag">&lt;/<span class="name">fe-button</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><table>
 <thead>
 <tr>
@@ -808,92 +796,22 @@
 </thead>
 <tbody>
 <tr>
-<td>type</td>
-<td>按钮类型</td>
-<td><code>String</code></td>
-<td><code>default</code></td>
-<td><code>default</code>,<code>primary</code>,<code>warn</code></td>
-</tr>
-<tr>
-<td>disabled</td>
-<td>按钮是否可用</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>true</code>,<code>false</code></td>
-</tr>
-<tr>
-<td>text</td>
-<td>按钮文字，同默认slot</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>mini</td>
-<td>是否为小按钮</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>true</code>,<code>false</code></td>
-</tr>
-<tr>
-<td>plain</td>
-<td>按钮是否有背景</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>true</code>,<code>false</code></td>
-</tr>
-<tr>
-<td>show-loading</td>
-<td>是否有loading</td>
-<td><code>Boolean</code></td>
-<td><code>false</code></td>
-<td><code>true</code>,<code>false</code></td>
-</tr>
-<tr>
-<td>link</td>
-<td>vue-router路由</td>
-<td><code>String</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>gradients</td>
-<td>背景渐变，数组最小要传两个值</td>
+<td>imgArr</td>
+<td>需要预览的图片列表</td>
 <td><code>Array</code></td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>action-type</td>
-<td>button的type属性，默认为浏览器默认(submit)</td>
-<td><code>String</code></td>
-<td><code>submit</code></td>
-<td><code>submit</code>,<code>button</code>,<code>reset</code></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
-<thead>
-<tr>
-<th>Slot名</th>
-<th>说明</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>default</td>
-<td>按钮文字</td>
+<td>position</td>
+<td>收个展示的图片id</td>
+<td><code>Number</code></td>
+<td><code>0</code></td>
 <td>-</td>
 </tr>
 <tr>
+<td>-</td>
+<td>-</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
@@ -905,16 +823,14 @@
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/feui/guide/component/badge.html">Badge 徽章</a></span>
+          <span>← <a href="/docs/feui/guide/component/uploader.html">Uploader 上传</a></span>
         
-        
-          <span style="float: right;"><a href="/docs/feui/guide/component/count.html">Count 累加器</a> →</span>
         
       </div>
     
     <div class="footer">
       文档出现错误或者想参与贡献?
-      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/button.md" target="_blank">
+      <a href="https://gitee.com/feui/feui-hexo/blob/master/source/feui/guide/component/imgpreview.md" target="_blank">
         在Github编辑此页面!
       </a>
     </div>
