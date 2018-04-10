@@ -78,11 +78,26 @@
 * [x] Tabbar
 * [x] Tabbar-item
 * [x] Tab-item
-* [x] Textarea
+* [x] Textrea
 * [x] Toast
 * [x] Uploader
+* [x] X-address
 
 <br/><br/><br/>
+
+## V 0.4.16
+
+### 已完成
+
+> x-address 添加类似jd移动端地址选择的组件<br/>
+> 优化tosat显示宽度<br/>
+
+## V 0.4.15
+
+### 已完成
+
+> img-preview图片预览组件修改<br/>
+
 ## V 0.4.14
 
 ### 已完成
