@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>PwdInput 密码输入框 — Feui</title>
+    <title>Pwdinput 密码输入框 — Feui</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/docs/images/favicon.ico" type="image/x-icon">
@@ -563,7 +563,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/pwdinput.html" class="sidebar-link current">PwdInput 密码输入框</a>
+      <a href="/docs/feui/guide/component/pwdinput.html" class="sidebar-link current">Pwdinput 密码输入框</a>
     </li>
   
     
@@ -777,14 +777,14 @@
 <div  id='content' class="content guide with-sidebar pwdinput-guide">
   <div class='content_box'>
     
-      <h1>PwdInput 密码输入框</h1>
+      <h1>Pwdinput 密码输入框</h1>
     
     <div id='pContent'>
       <p><a href="https://feui.gitee.io/#/pwdinput">Live Demo&gt;&gt;</a></p>
 <blockquote>
 <p><code>fe-pwdinput</code> 请配合<code>fe-keyboard</code>使用。</p>
 </blockquote>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; PwdInput &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [PwdInput.name]: PwdInput</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    value: <span class="string">''</span>,</div><div class="line">    showKeyboard: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Pwdinput &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Pwdinput.name]: Pwdinput</div><div class="line">&#125;,</div><div class="line">data() &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    value: <span class="string">''</span>,</div><div class="line">    showKeyboard: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-pwdinput</span> <span class="attr">:value</span>=<span class="string">"value"</span> <span class="attr">info</span>=<span class="string">"密码为 6 位数字"</span></span></div><div class="line"><span class="tag">  @<span class="attr">focus</span>=<span class="string">"showKeyboard = true"</span> &gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-pwdinput</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="输入明文"><a href="#输入明文" class="headerlink" title="输入明文"></a>输入明文</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-pwdinput</span> <span class="attr">:value</span>=<span class="string">"value"</span> <span class="attr">info</span>=<span class="string">""</span> </span></div><div class="line"><span class="tag">  @<span class="attr">focus</span>=<span class="string">"showKeyboard = true"</span> <span class="attr">:isPwd</span>=<span class="string">'false'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-pwdinput</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="输入明文-1"><a href="#输入明文-1" class="headerlink" title="输入明文"></a>输入明文</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-pwdinput</span> <span class="attr">:value</span>=<span class="string">"value"</span> <span class="attr">info</span>=<span class="string">"密码为 6 位数字"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">focus</span>=<span class="string">"showKeyboard = true"</span> <span class="attr">currentColor</span>=<span class="string">'#4a90e2'</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-pwdinput</span>&gt;</span></div></pre></td></tr></table></figure>
