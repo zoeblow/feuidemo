@@ -395,6 +395,20 @@
     
     
     <li>
+      <a href="/docs/feui/guide/component/checker.html" class="sidebar-link new">Checker 选择按钮</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+    <li>
       <a href="/docs/feui/guide/component/countup.html" class="sidebar-link">Countup 数字滚动</a>
     </li>
   
@@ -747,7 +761,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/imgpreview.html" class="sidebar-link new">ImgPreview 图片预览</a>
+      <a href="/docs/feui/guide/component/imgpreview.html" class="sidebar-link">ImgPreview 图片预览</a>
     </li>
   
     
@@ -781,9 +795,6 @@
     
     <div id='pContent'>
       <p><a href="https://feui.gitee.io/#/checklist">Live Demo&gt;&gt;</a></p>
-<blockquote>
-<p><code>fe-count</code> 请在<code>fe-group</code>中使用。</p>
-</blockquote>
 <h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Checklist &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line"></div><div class="line">components: &#123;</div><div class="line">  [Checklist.name]: Checklist</div><div class="line">&#125;,</div><div class="line">data () &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    checklist001: [],</div><div class="line">    commonList: [ <span class="string">'安徽'</span>, <span class="string">'浙江'</span>, <span class="string">'北京'</span> ],</div><div class="line">    checklist002: [ <span class="string">'安徽'</span>, <span class="string">'浙江'</span> ],</div><div class="line">    checklist003: [ <span class="string">'安徽'</span>, <span class="string">'浙江'</span> ],</div><div class="line">    checklist005: [ <span class="string">'01'</span>, <span class="string">'02'</span>, <span class="string">'03'</span> ],</div><div class="line">    objectList: [&#123;<span class="attr">key</span>: <span class="string">'1'</span>, <span class="attr">value</span>: <span class="string">'001 value'</span>&#125;, &#123;<span class="attr">key</span>: <span class="string">'2'</span>, <span class="attr">value</span>: <span class="string">'002 value'</span>&#125;, &#123;<span class="attr">key</span>: <span class="string">'3'</span>, <span class="attr">value</span>: <span class="string">'003 value'</span>&#125;],</div><div class="line">    objectListValue: [<span class="string">'1'</span>, <span class="string">'2'</span>],</div><div class="line">    inlineDescList: [</div><div class="line">      &#123;<span class="attr">key</span>: <span class="string">'1'</span>, <span class="attr">value</span>: <span class="string">'Tiger is good'</span>, <span class="attr">inlineDesc</span>: <span class="string">'Tiger is the king of mountain'</span>&#125;,</div><div class="line">      &#123;<span class="attr">key</span>: <span class="string">'2'</span>, <span class="attr">value</span>: <span class="string">'Lion is better'</span>, <span class="attr">inlineDesc</span>: <span class="string">'Lion is the king of woods'</span>&#125;,</div><div class="line">      &#123;<span class="attr">key</span>: <span class="string">'3'</span>, <span class="attr">value</span>: <span class="string">'Camel is best, no inline-desc'</span>&#125;</div><div class="line">    ],</div><div class="line">    inlineDescListValue: [<span class="number">1</span>],</div><div class="line">    asyncList: [],</div><div class="line">    asyncListValue: [],</div><div class="line">    radioValue: [<span class="string">'安徽'</span>]</div><div class="line">  &#125;</div><div class="line">&#125;,</div><div class="line">methods:&#123;</div><div class="line">  change (val) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'change'</span>, val)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-checklist</span> <span class="attr">title</span>=<span class="string">"基础用法"</span> </span></div><div class="line"><span class="tag">  <span class="attr">:label-position</span>=<span class="string">"labelPosition"</span> </span></div><div class="line"><span class="tag">  <span class="attr">required</span> <span class="attr">:options</span>=<span class="string">"commonList"</span> </span></div><div class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"checklist001"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">"change"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-checklist</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="禁用操作"><a href="#禁用操作" class="headerlink" title="禁用操作"></a>禁用操作</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-checklist</span> <span class="attr">title</span>=<span class="string">"默认选中 安徽 和 浙江 (禁用操作)"</span> </span></div><div class="line"><span class="tag">  <span class="attr">disabled</span> <span class="attr">label-position</span>=<span class="string">"left"</span> </span></div><div class="line"><span class="tag">  <span class="attr">:options</span>=<span class="string">"commonList"</span> </span></div><div class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"checklist002"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-checklist</span>&gt;</span></div></pre></td></tr></table></figure>
