@@ -37,6 +37,7 @@
 * [x] Cell
 * [x] Cell-box
 * [x] Checkicon
+* [x] Checker
 * [x] Checklist
 * [x] Count
 * [x] Countup
@@ -84,6 +85,29 @@
 * [x] X-address
 
 <br/><br/><br/>
+## V 0.5.7
+
+### 已完成
+
+> 修改 toast ios下 width:max-content bug<br/>
+
+## V 0.5.6
+
+### 已完成
+
+> 丰富toast组件 <br/>
+## V 0.5.5
+
+### 已完成
+
+> 添加checker组件 <br/>
+
+## V 0.5.4
+
+### 已完成
+
+> Dialog 组件修改<br/>
+
 ## V 0.5.3
 
 ### 已完成
