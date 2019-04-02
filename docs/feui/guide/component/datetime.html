@@ -381,7 +381,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/checker.html" class="sidebar-link new">Checker 选择按钮</a>
+      <a href="/docs/feui/guide/component/checklist.html" class="sidebar-link">Checklist 按钮组</a>
     </li>
   
     
@@ -395,7 +395,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/checklist.html" class="sidebar-link">Checklist 按钮组</a>
+      <a href="/docs/feui/guide/component/checker.html" class="sidebar-link">Checker 选择按钮</a>
     </li>
   
     
@@ -607,7 +607,7 @@
     
     
     <li>
-      <a href="/docs/feui/guide/component/datetime.html" class="sidebar-link current">Datetime 日期</a>
+      <a href="/docs/feui/guide/component/datetime.html" class="sidebar-link current new">Datetime 日期</a>
     </li>
   
     
@@ -796,7 +796,7 @@
     <div id='pContent'>
       <p><a href="https://feui.gitee.io/#/datetime">Live Demo&gt;&gt;</a></p>
 <h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Datetime &#125; <span class="keyword">from</span> <span class="string">'feui'</span>;</div><div class="line">components: &#123;</div><div class="line">  [Datetime.name]: Datetime</div><div class="line">&#125;,</div><div class="line">methods: &#123;</div><div class="line">  change (value) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'change'</span>, value)</div><div class="line">  &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"默认格式: YYYY-MM-DD"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"value1"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><h4 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"默认格式: YYYY-MM-DD"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"value1"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"全部格式: YYYY-MM-DD HH:mm:ss"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"value1"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">format</span>=<span class="string">"YYYY-MM-DD HH:mm:ss"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="定义小时分钟列表"><a href="#定义小时分钟列表" class="headerlink" title="定义小时分钟列表"></a>定义小时分钟列表</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"定义小时分钟列表"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"hourListValue"</span> <span class="attr">format</span>=<span class="string">"YYYY-MM-DD HH:mm"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:hour-list</span>=<span class="string">"['09', '10', '11', '12', '13', '14', '15', '16']"</span> </span></div><div class="line"><span class="tag">    <span class="attr">:minute-list</span>=<span class="string">"['00', '15', '30', '45']"</span> </span></div><div class="line"><span class="tag">    @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="只读模式"><a href="#只读模式" class="headerlink" title="只读模式"></a>只读模式</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"Readonly"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"valueReadonly"</span> <span class="attr">:readonly</span>=<span class="string">"readonly"</span> </span></div><div class="line"><span class="tag">  @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"生日"</span>&gt;</span><span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="设置开始时间和结束日"><a href="#设置开始时间和结束日" class="headerlink" title="设置开始时间和结束日"></a>设置开始时间和结束日</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">fe-group</span> <span class="attr">title</span>=<span class="string">"设置开始时间和结束日期 2015-11-11 ~ 2018-11-11"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">fe-datetime</span> <span class="attr">v-model</span>=<span class="string">"limitHourValue"</span> <span class="attr">:start-date</span>=<span class="string">"startDate"</span> <span class="attr">:end-date</span>=<span class="string">"endDate"</span> </span></div><div class="line"><span class="tag">    <span class="attr">format</span>=<span class="string">"YYYY-MM-DD HH:mm"</span> @<span class="attr">on-change</span>=<span class="string">"change"</span> <span class="attr">title</span>=<span class="string">"开始时间"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">fe-datetime</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">fe-group</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -830,7 +830,7 @@
 <td>时间格式</td>
 <td><code>String</code></td>
 <td>YYYY-MM-DD</td>
-<td>YYYY-MM-DD HH:mm:ss等</td>
+<td>YYYY-MM-DD HH:mm、YYYY-MM-DD HH:mm:ss等</td>
 </tr>
 <tr>
 <td>inline-desc</td>
