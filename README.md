@@ -25,6 +25,13 @@
   </a>
   <br>
   <br>
+  <h2 align="center">Feart</h2>  
+  <p align="center">另一个好用的基于Vue 的移动端组件库--Feart</p> 
+  <p align="center">
+  🏠 <a href="https://nuofe.github.io/feart" target="_blank">文档网站</a>
+  &nbsp;
+  🏡 <a href="https://nuofe.github.io/feart/mobile" target="_blank">Demo展示</a>
+</p>
 </div>
 
 ## Todo List
@@ -85,6 +92,12 @@
 - [x] X-address
 
 <br/><br/><br/>
+
+## V 0.6.8
+
+### 已完成
+
+> checklist 组件修复单选 <br/>
 
 ## V 0.6.7
 
